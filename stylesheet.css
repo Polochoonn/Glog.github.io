@@ -5,10 +5,10 @@
     
     body
     {
-    width: 760px;
+    width: 90%;
     margin: auto; /* Pour centrer notre page */
-    margin-top: 10px; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
-    margin-bottom: 10px;    /* aussi pour le bas du navigateur */
+    margin-top: 10%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
+    margin-bottom: 10%;    /* aussi pour le bas du navigateur */
     background-color: #bfd1d0; /* Un fond pour éviter d'avoir un fond blanc  */	
     }
     
@@ -43,7 +43,7 @@
     }
     
     .mol-container {
-        width: 60%;
+        width: 90%;
         height: 400px;
         position: relative;
       }
