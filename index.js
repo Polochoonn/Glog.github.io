@@ -1,3 +1,8 @@
+var x = document.getElementById("browseID").value;
+console.log(x);
+
+
+
 $(function() {
     let element = $('#container-01');
     let config = { backgroundColor: 'white' };
