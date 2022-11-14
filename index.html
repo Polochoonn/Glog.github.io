@@ -6,11 +6,57 @@
 
   <body>
     <!-- Contenu principal -->
-    <h1 class="test">Proteines</h1>
-    <link rel="stylesheet" href="stylesheet.css" />
-    <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js""></script>
-    <div id="container-01" class="mol-container"></div>
-    <script type="text/javascript" src="index.js"></script>
+    
+ <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <title>Glog</title>
+  </head>
+
+
+  
+  <body>
+
+
+
+	<div id="en_tete">
+    <!-- Ici on mettra la bannière de l'entête-->
+    </div>		 
+    <div id="menu">
+    <!-- Ici on mettra le menu -->
+    </div>
+    <div id="corps">
+
+      <h1 class="test">Proteines</h1>
+       <script type="text/javascript" src="index.js"></script>
+       <link rel="stylesheet" href="stylesheet.css" />
+      <h2> Rechercher une protéine sur le site</h2>
+        <label for="site-search"></label>
+        <input type="search" id="site-search" name="q">
+        <button>Search</button>
+
+      <h2> Choisir un fichier à importer </h2>
+        <section>
+          <label for="browseID">Choisir un fichier</label>
+          <input id="browseID" type="file" class="browse">
+        </section>
+      <h2> Afficher la protéine 4QWO </h2>
+        <form>
+          <input type="button" value="Afficher 4QWO" accesskey="s">
+
+          <link rel="stylesheet" href="stylesheet.css" />
+          <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js""></script>
+          <div id="container-01" class="mol-container"></div>
+          <script type="text/javascript" src="index.js"></script>
+
+        </form>
+        
+    <!-- Ici on mettra le contenu principal de la page (tout le texte....) -->
+    </div>		 
+    <div id="pied_de_page">
+    <!-- Et, on mettra en bas de la page le nom de l'auteur, un copyright... -->
+    </div>
+    
 
     </body>
 </html>
