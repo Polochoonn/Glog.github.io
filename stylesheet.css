@@ -1,49 +1,49 @@
 .test{
-color: green;
-}
-
-
-body
-{
-width: 760px;
-margin: auto; /* Pour centrer notre page */
-margin-top: 10px; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
-margin-bottom: 10px;    /* aussi pour le bas du navigateur */
-background-color: #bfd1d0; /* Un fond pour éviter d'avoir un fond blanc  */	
-}
-
-
-#corps
-{
-margin-left: 130px;
-margin-bottom: 20px;
-padding: 10px;
-color: #B3B3B3;
-background-color: #f4ceb8;
-background-image: url("images1/motif.png");
-background-repeat: repeat-x;
-border: 2px solid black;
-}
-#corps h1 /* Tous les titres h1 du corps */
-{
-color: #dd0011;
-text-align: center;
-font-family: Arial, "Times New Roman", Times, serif;
-}
-
-#corps h2 /* Tous les titres h2 du corps */
-{
-height: 30px;
-background-color: #22ff00; 
-/* Une petite image (15x15) de fond sur les titres h2 */
-background-image: url("images1/petite_image.png");
-background-repeat: no-repeat; /* L'image  se placera  à gauche du titre */
-padding-left: 20px;
-color: #0000ff;
-text-align: left;
-}
-.mol-container {
-    width: 60%;
-    height: 400px;
-    position: relative;
-  }
+    color: green;
+    }
+    
+    
+    body
+    {
+    width: 760px;
+    margin: auto; /* Pour centrer notre page */
+    margin-top: 10px; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
+    margin-bottom: 10px;    /* aussi pour le bas du navigateur */
+    background-color: #bfd1d0; /* Un fond pour éviter d'avoir un fond blanc  */	
+    }
+    
+    
+    #corps
+    {
+    margin-left: 130px;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #B3B3B3;
+    background-color: #f4ceb8;
+    background-image: url("images1/motif.png");
+    background-repeat: repeat-x;
+    border: 2px solid black;
+    }
+    #corps h1 /* Tous les titres h1 du corps */
+    {
+    color: #dd0011;
+    text-align: center;
+    font-family: Arial, "Times New Roman", Times, serif;
+    }
+    
+    #corps h2 /* Tous les titres h2 du corps */
+    {
+    height: 30px;
+    /* Une petite image (15x15) de fond sur les titres h2 */
+    background-image: url("images1/petite_image.png");
+    background-repeat: no-repeat; /* L'image  se placera  à gauche du titre */
+    padding-left: 20px;
+    color: #0000ff;
+    text-align: left;
+    }
+    
+    .mol-container {
+        width: 60%;
+        height: 400px;
+        position: relative;
+      }

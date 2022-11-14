@@ -35,29 +35,40 @@
         <input type="search" id="site-search" name="q">
         <button>Search</button>
 
-      <h2> Choisir un fichier à importer </h2>
+      <h2> Importer un pdb </h2>
         <section>
-          <label for="browseID">Choisir un fichier</label>
+          <label for="browseID">Choisir</label>
           <input id="browseID" type="file" class="browse">
         </section>
+
+      <h2> Importer un fichier fasta </h2>
+      <section>
+        <label for="browseID">Choisir</label>
+        <input id = "charge" type="file" class="browse" accept=".fasta">
+        <div> <button id="uploadFasta" onclick="uploadFasta()"> Envoyer</button></div>
+      </section>
       <h2> Afficher la protéine 4QWO </h2>
         <form>
-          <input type="button" value="Afficher 4QWO" accesskey="s">
+          <input onclick="display3D()" type="button" name="affiche" value="Afficher 4QWO" accesskey="s">
 
-          <link rel="stylesheet" href="stylesheet.css" />
-          <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js""></script>
+          <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
           <div id="container-01" class="mol-container"></div>
-          <script type="text/javascript" src="index.js"></script>
 
         </form>
         
     <!-- Ici on mettra le contenu principal de la page (tout le texte....) -->
+
+    <div id="container-01" class="mol-container"></div>
+    <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
     </div>		 
     <div id="pied_de_page">
     <!-- Et, on mettra en bas de la page le nom de l'auteur, un copyright... -->
     </div>
-    
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script type="text/javascript" src="index.js"></script>
+
 
     </body>
 </html>
-

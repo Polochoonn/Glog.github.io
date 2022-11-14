@@ -1,9 +1,40 @@
-var x = document.getElementById("browseID").value;
-console.log(x);
+/*class Protein {
+    id_pdb;
+    fasta_file;
+    pdb_file;
 
+    constructor(id_pdb) {
+      this.id_pdb = id_pdb;
+    }
 
+    set_fasta(fasta_file){
+        this.fasta_file= fasta_file;
+    }
+    set_pdb(pdb_file){
+        this.pdb_file= pdb_file;
+    }
 
-$(function() {
+    get_fasta(){
+        return this.fasta_file;
+    }
+    get_pdb(){
+        return this.pdb_file;
+    }
+  }
+ */ 
+  async function readFile(ev){
+    console.log(ev.target.files[0]);
+    const file = ev.target.files[0]; //on récupère l'objet files
+    const txt = await file.text();
+    console.log(txt.length);
+}
+
+function uploadFasta(){
+    var input = document.getElementById("charge").value;
+    console.log("estes");
+    console.log(input);
+}
+function display3D() {
     let element = $('#container-01');
     let config = { backgroundColor: 'white' };
     let viewer = $3Dmol.createViewer( element, config );
@@ -21,4 +52,4 @@ $(function() {
       console.error( "Failed to load PDB " + pdbUri + ": " + err );
     },
 })
-});
+}
