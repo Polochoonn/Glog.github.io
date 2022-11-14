@@ -9,24 +9,19 @@
     margin: auto; /* Pour centrer notre page */
     margin-top: 10%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
     margin-bottom: 10%;    /* aussi pour le bas du navigateur */
-    background-color: #bfd1d0; /* Un fond pour éviter d'avoir un fond blanc  */	
+    background-color: #bfd1d0; /* Un fond pour éviter d'avoir un fond blanc  */
     }
     
     
     #corps
     {
-    margin-left: 130px;
-    margin-bottom: 20px;
-    padding: 10px;
-    color: #B3B3B3;
-    background-color: #ffffff;
-    background-image: url("images1/motif.png");
-    background-repeat: repeat-x;
-    border: 2px solid black;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    padding: 0%;
     }
     #corps h1 /* Tous les titres h1 du corps */
     {
-    color: #dd0011;
+    color: #d5616aab;
     text-align: center;
     font-family: Arial, "Times New Roman", Times, serif;
     }
@@ -39,12 +34,12 @@
     background-repeat: no-repeat; /* L'image  se placera  à gauche du titre */
     padding-left: 20px;
     color: #0000ff;
-    text-align: left;
+ 
     }
     
     .mol-container {
-        
         width: 90%;
         height: 400px;
         position: relative;
+   
       }
