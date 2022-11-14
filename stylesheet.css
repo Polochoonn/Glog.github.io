@@ -19,7 +19,7 @@
     margin-bottom: 20px;
     padding: 10px;
     color: #B3B3B3;
-    background-color: #f4ceb8;
+    background-color: #ffffff;
     background-image: url("images1/motif.png");
     background-repeat: repeat-x;
     border: 2px solid black;
@@ -43,6 +43,7 @@
     }
     
     .mol-container {
+        
         width: 90%;
         height: 400px;
         position: relative;
