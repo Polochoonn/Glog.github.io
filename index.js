@@ -36,7 +36,7 @@ function uploadFasta(){
 }
 function display3D() {
     let element = $('#container-01');
-    let config = { backgroundColor: 'white' };
+    let config = { backgroundColor: '#eed9bd' };
     let viewer = $3Dmol.createViewer( element, config );
   let pdbUri = './4qw0.pdb';
   jQuery.ajax( pdbUri, { 
@@ -52,4 +52,38 @@ function display3D() {
       console.error( "Failed to load PDB " + pdbUri + ": " + err );
     },
 })
+}
+
+
+
+
+// Navbar
+
+
+var clients = document.getElementById('clients');
+var services = document.getElementById('services');
+
+clients.addEventListener('click', function() {
+  $(clients).toggleClass("active");
+  $(".parent:not(#clients)").toggleClass("invisible");
+}, false);
+
+services.addEventListener('click', function() {
+  $(services).toggleClass("active");
+  $(".parent:not(#services)").toggleClass("invisible");
+}, false);
+
+
+
+
+function home(){
+  document.location.href="./index.html";
+}
+
+function RedirectionJavascript(){
+  document.location.href="https://ent.u-bordeaux.fr/uPortal/f/welcome/normal/render.uP"; 
+}
+
+function redirectionlocal(){
+  document.location.href="./nouvellepage.html";
 }

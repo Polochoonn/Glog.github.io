@@ -1,45 +1,51 @@
-.test{
-    color: green;
-    }
-    
-    
     body
     {
-    width: 90%;
+    width: 100%;
     margin: auto; /* Pour centrer notre page */
-    margin-top: 10%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
-    margin-bottom: 10%;    /* aussi pour le bas du navigateur */
-    background-color: #bfd1d0; /* Un fond pour éviter d'avoir un fond blanc  */
+    margin-top: 00%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
+    margin-bottom: 0%;    /* aussi pour le bas du navigateur */
+    background-color: #eed9bd; /* Un fond pour éviter d'avoir un fond blanc  */
     }
     
-    
-    #corps
-    {
-    margin-left: 0%;
-    margin-bottom: 0%;
-    padding: 0%;
-    }
-    #corps h1 /* Tous les titres h1 du corps */
-    {
-    color: #d5616aab;
-    text-align: center;
-    font-family: Arial, "Times New Roman", Times, serif;
-    }
-    
-    #corps h2 /* Tous les titres h2 du corps */
-    {
-    height: 30px;
-    /* Une petite image (15x15) de fond sur les titres h2 */
-    background-image: url("images1/petite_image.png");
-    background-repeat: no-repeat; /* L'image  se placera  à gauche du titre */
-    padding-left: 20px;
-    color: #0000ff;
- 
-    }
-    
+   
+   
     .mol-container {
-        width: 90%;
+        width: 70%;
         height: 400px;
         position: relative;
    
+      }
+
+
+
+/* entete  */
+
+
+      #neubar {
+        background: #fae8d2;
+        box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
+      }
+       
+      .nav-item .active {
+        border-radius: 6px;
+        background: linear-gradient(145deg, #ffe7ca, #f5d7b2);
+        box-shadow:  4px 4px 8px #ddc1a0,
+                     -4px -4px 8px #f7e5cc;
+      }
+      #neubar .dropdown-menu a:hover {
+        color: #454545
+      }
+      #neubar .nav-item {
+        margin : auto 4px;
+      }
+      #neubar a {
+       
+        padding-left:12px;
+        padding-right:12px;
+      }
+      #neubar .dropdown-menu {
+        background : #dae1dd
+      }
+      a.navbar-brand {
+        color: #454545
       }
