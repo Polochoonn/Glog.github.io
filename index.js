@@ -173,5 +173,5 @@ function RedirectionTest(){
 }
 
 function RedirectionPrediction(){
-  document.location.href="./nouvellepage.html";
+  document.location.href="./prediction.html";
 }
