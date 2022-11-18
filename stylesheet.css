@@ -1,12 +1,17 @@
 body {
     width: 100%;
     margin: auto; /* Pour centrer notre page */
-    margin-top: 00%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
+    margin-top: 0%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
     margin-bottom: 0%;    /* aussi pour le bas du navigateur */
     background-color:  #f0e8db; /* Un fond pour éviter d'avoir un fond blanc  */
-
     }
-    
+
+.index{
+    background-image:url(https://qtxasset.com/quartz/qcloud5/media/image/monkeypox.jpg?VersionId=ceL6JETFE2qUDkzrikRPRVMnYPDg6dvJ);
+    background-repeat:no-repeat;
+    background-size: 100% auto;
+  
+}
 
    #container-mol {
     border:5px solid black;
