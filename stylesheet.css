@@ -1,24 +1,33 @@
-    body
-    {
+body {
     width: 100%;
     margin: auto; /* Pour centrer notre page */
     margin-top: 00%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
     margin-bottom: 0%;    /* aussi pour le bas du navigateur */
-    background-color: #d5cdc2; /* Un fond pour éviter d'avoir un fond blanc  */
+    background-color:  #f0e8db; /* Un fond pour éviter d'avoir un fond blanc  */
+
     }
     
-   
-   
+
+   #container-mol {
+    border:5px solid black;
+    padding:0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    
+   }
     .mol-container {
         width: 70%;
         height: 400px;
         position: relative;
-   
+       
+       
+
       }
 
-
-
-/* entete  */
+/* navbar  */
 
 
       #neubar {

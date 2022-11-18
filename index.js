@@ -6,7 +6,7 @@ window.onload = function(){
   header.innerHTML = `
   <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="/"
           ><img
             src="https://cdn-icons-png.flaticon.com/512/3024/3024310.png"
             height="60"
@@ -27,25 +27,23 @@ window.onload = function(){
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a
-                onclick="RedirectionHome()"
                 class="nav-link mx-2 active"
                 aria-current="page"
-                href="#"
+                href="/"
                 >Home</a
               >
             </li>
             <li class="nav-item">
               <a
-                onclick=" RedirectionTest()"
                 class="nav-link mx-2"
-                href="#"
-                >Visualisation</a
+                href="https://ent.u-bordeaux.fr/uPortal/f/welcome/normal/render.uP"
+                >Prediction</a
               >
             </li>
             <li class="nav-item">
-              <a  onclick=" RedirectionPrediction()"
+              <a 
                   class="nav-link mx-2" 
-                  href="#">Prediction</a>
+                  href="/prediction.html">Visualisation</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -76,16 +74,25 @@ window.onload = function(){
 
 
 
-// Fonction de redirection 
 
+// navbar extend 
+
+var clients = document.getElementById('clients');
+var services = document.getElementById('services');
+
+clients.addEventListener('click', function() {
+  $(clients).toggleClass("active");
+  $(".parent:not(#clients)").toggleClass("invisible");
+}, false);
+
+services.addEventListener('click', function() {
+  $(services).toggleClass("active");
+  $(".parent:not(#services)").toggleClass("invisible");
+}, false);
+
+
+// Fonction de redirection 
+// pas utilse elle sert d'exemple pour l'instant
 function RedirectionHome(){
   document.location.href="./index.html";
-}
-
-function RedirectionTest(){
-  document.location.href="https://ent.u-bordeaux.fr/uPortal/f/welcome/normal/render.uP"; 
-}
-
-function RedirectionPrediction(){
-  document.location.href="./prediction.html";
 }

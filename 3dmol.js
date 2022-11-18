@@ -28,23 +28,6 @@
  */ 
 
 
-// navbar extend 
-
-var clients = document.getElementById('clients');
-var services = document.getElementById('services');
-
-clients.addEventListener('click', function() {
-  $(clients).toggleClass("active");
-  $(".parent:not(#clients)").toggleClass("invisible");
-}, false);
-
-services.addEventListener('click', function() {
-  $(services).toggleClass("active");
-  $(".parent:not(#services)").toggleClass("invisible");
-}, false);
-
-
-
 
   async function readFile(ev){
     console.log(ev.target.files[0]);
@@ -60,7 +43,7 @@ function uploadFasta(){
 }
 function display3D() {
     let element = $('#container-01');
-    let config = { backgroundColor: '#eed9bd' };
+    let config = { backgroundColor: ' #f0e8db' };
     let viewer = $3Dmol.createViewer( element, config );
   let pdbUri = './4qw0.pdb';
   jQuery.ajax( pdbUri, { 

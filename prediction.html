@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
   <head>
-    <link rel="stylesheet" href="stylesheet.css" />
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="3dmol.js"></script>
   </head>
+
   <body>
     <div id="header"></div>
     <div id="corps">
@@ -17,8 +17,11 @@
           value="Afficher 4QWO"
           accesskey="s"
         />
+
         <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
-        <div id="container-01" class="mol-container"></div>
+        <div id="container-mol">
+          <div id="container-01" class="mol-container"></div>
+        </div>
       </form>
 
       <h2>Importer un pdb</h2>
@@ -49,4 +52,5 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"
   ></script>
+  <link rel="stylesheet" href="stylesheet.css" />
 </html>
