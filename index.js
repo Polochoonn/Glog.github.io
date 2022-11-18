@@ -1,3 +1,83 @@
+window.onload = function(){
+  let header=
+  document.querySelector("#header");
+  header.innerHTML = `
+  <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/512/3024/3024310.png"
+            height="60"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                onclick="RedirectionHome()"
+                class="nav-link mx-2 active"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                onclick=" RedirectionTest()"
+                class="nav-link mx-2"
+                href="#"
+                >Visualisation</a
+              >
+            </li>
+            <li class="nav-item">
+              <a  onclick=" RedirectionPrediction()"
+                  class="nav-link mx-2" 
+                  href="#">Prediction</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link mx-2 dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Test
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">Action1</a></li>
+                <li><a class="dropdown-item" href="#">Action2</a></li>
+                <li><a class="dropdown-item" href="#">Action3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+`
+}
+
+
+
+
+
+
+
 /*class Protein {
     id_pdb;
     fasta_file;
@@ -22,6 +102,26 @@
     }
   }
  */ 
+
+
+// navbar extend 
+
+var clients = document.getElementById('clients');
+var services = document.getElementById('services');
+
+clients.addEventListener('click', function() {
+  $(clients).toggleClass("active");
+  $(".parent:not(#clients)").toggleClass("invisible");
+}, false);
+
+services.addEventListener('click', function() {
+  $(services).toggleClass("active");
+  $(".parent:not(#services)").toggleClass("invisible");
+}, false);
+
+
+
+
   async function readFile(ev){
     console.log(ev.target.files[0]);
     const file = ev.target.files[0]; //on récupère l'objet files
@@ -60,30 +160,18 @@ function display3D() {
 // Navbar
 
 
-var clients = document.getElementById('clients');
-var services = document.getElementById('services');
-
-clients.addEventListener('click', function() {
-  $(clients).toggleClass("active");
-  $(".parent:not(#clients)").toggleClass("invisible");
-}, false);
-
-services.addEventListener('click', function() {
-  $(services).toggleClass("active");
-  $(".parent:not(#services)").toggleClass("invisible");
-}, false);
 
 
 
 
-function home(){
+function RedirectionHome(){
   document.location.href="./index.html";
 }
 
-function RedirectionJavascript(){
+function RedirectionTest(){
   document.location.href="https://ent.u-bordeaux.fr/uPortal/f/welcome/normal/render.uP"; 
 }
 
-function redirectionlocal(){
+function RedirectionPrediction(){
   document.location.href="./nouvellepage.html";
 }
