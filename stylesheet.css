@@ -47,21 +47,32 @@ body {
 #container-mol {
     border:5px solid black;
     padding:0px;
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top:5%;
+    margin-left: auto;
+    margin-right: auto;
  
     
    }
     .mol-container {
         width: 70%;
-        height: 400px;
+        height: 60vh;
         position: relative;
        
-       
-
       }
+#container-visualisation{
+  width: 100%;
+  margin: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+
 
 /* navbar  */
 

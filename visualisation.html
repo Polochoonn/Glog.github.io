@@ -9,7 +9,9 @@
 
   <body>
     <div id="header"></div>
-    <div id="corps">
+
+<div id="container-visualisation">
+    <div id="affiche-prot">
       <h2>Afficher la protéine 4QWO</h2>
       <form>
         <input
@@ -19,13 +21,10 @@
           value="Afficher 4QWO"
           accesskey="s"
         />
-
-        <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
-        <div id="container-mol">
-          <div id="container-01" class="mol-container"></div>
-        </div>
       </form>
-      <div id="subsection">
+      
+    </div>
+      <div id="proteine-enregistre">
         <h2>Visualiser proteines déjà enregistrée</h2>
         
         <input
@@ -36,7 +35,12 @@
         accesskey="s"
       />
       </div>
+    </div>
 
+      <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+      <div id="container-mol">
+        <div id="container-01" class="mol-container"></div>
+      </div>
   
   </body>
 
