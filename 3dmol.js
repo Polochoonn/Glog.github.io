@@ -18,6 +18,8 @@ class Protein {
         return this.fasta_file;
     }
     get_pdb() {
+        console.log("Print du pdb");
+        console.log(this.pdb_file);
         return this.pdb_file;
     }
 }
@@ -56,18 +58,19 @@ function showThis() {
 }
 
 
-function display3D(protein_pdb) {
+function display3D(protein) {
     console.log("Start 3D visualisation");
-    console.log(protein_pdb)
-
+    console.log(protein)
     let element = $('#container-01');
     let config = { backgroundColor: ' #f0e8db' };
     let viewer = $3Dmol.createViewer(element, config);
-    let pdbUri = protein_pdb.get_pdb();
+    console.log("fdp");
+    let pdbUri = protein.get_pdb();
+    console.log(pdbUri);
     jQuery.ajax(pdbUri, {
         success: function (data) {
             let v = viewer;
-            v.addModel(data, "pdb");                       /* load data */
+            v.addModel("pdb:1MO8", "pdb");                       /* load data */
             v.setStyle({}, { cartoon: { color: 'spectrum' } });  /* style all atoms */
             v.zoomTo();                                      /* set camera */
             v.render();                                      /* render scene */
