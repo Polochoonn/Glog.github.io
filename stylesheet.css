@@ -6,6 +6,7 @@ body {
     margin-top: 0%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
     margin-bottom: 0%;    /* aussi pour le bas du navigateur */
     background-color:  #f0e8db; /* Un fond pour éviter d'avoir un fond blanc  */
+    padding: 0%;
     }
 
 /* Pour l'image sur index */
