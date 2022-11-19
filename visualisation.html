@@ -1,6 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en"> 
+  <title>Titre</title>
   <head>
+    <meta charset="utf-8">
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="initialize_prot.js"></script>
     <script type="text/javascript" src="3dmol.js"></script>
@@ -33,10 +35,16 @@
       type="button"
       name="display_4QWO"
       value="Afficher 4QWO"
-      accesskey="s"
+      
     />
     </div>
+   <form action="/visualisation.html" enctype="multipart/form-data" method="post">
+    <label for="mypdb">Select a file</label>
+    <input type="file" name="mypdb" id="mypdb" accept=".pdb">
+    <input onclick = "diplay3D(mypdb)" type="submit">
+   </form>
 
+  </div>
   
   </body>
 

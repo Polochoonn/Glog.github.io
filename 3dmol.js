@@ -30,8 +30,9 @@ class Protein {
 async function readFile(ev) {
     console.log(ev.target.files[0]);
     const file = ev.target.files[0]; //on récupère l'objet files
-    const txt = await file.text();
-    console.log(txt.length);
+    //const txt = await file.text();
+    //console.log(txt.length);
+    display3D(file);
 }
 
 function uploadFasta() {
@@ -64,13 +65,12 @@ function display3D(protein) {
     let element = $('#container-01');
     let config = { backgroundColor: ' #f0e8db' };
     let viewer = $3Dmol.createViewer(element, config);
-    console.log("fdp");
-    let pdbUri = protein.get_pdb();
+    let pdbUri =protein;
     console.log(pdbUri);
     jQuery.ajax(pdbUri, {
         success: function (data) {
             let v = viewer;
-            v.addModel("pdb:1MO8", "pdb");                       /* load data */
+            v.addModel(pdbUri, "pdb");                       /* load data */
             v.setStyle({}, { cartoon: { color: 'spectrum' } });  /* style all atoms */
             v.zoomTo();                                      /* set camera */
             v.render();                                      /* render scene */
