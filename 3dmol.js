@@ -87,3 +87,20 @@ function showThis()
             },
         })
     }
+
+
+
+window.onload = function(){
+    let test=
+    document.querySelector("#molecule");
+    let molecule = "4QWO"
+    test.innerHTML = `
+    <iframe id="inlineFrameExample"
+    title="Visualisation proteine connus"
+    width="600"
+    height="600"
+    src="https://3Dmol.org/viewer.html?pdb=${molecule}">
+</iframe>
+  `
+  }
+  
