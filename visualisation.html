@@ -4,59 +4,70 @@
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="3dmol.js"></script>
     <script type="text/javascript" src="initialize_prot.js"></script>
-
   </head>
 
   <body>
     <div id="header"></div>
 
-<div id="container-visualisation">
-  <div id="import-pdb" class="import-pdb">  
-    <h2>Importer un fichier PDB</h2>
+    <div class="container-vcarre-v">
+      <div id="container-visualisation">
+        <section id="import-pdb" class="import-pdb">
+          <h2>Importer un fichier PDB</h2>
 
-    <div class="mb-3">
-      <label for="formFileMultiple" class="form-label"></label>
-      <input onchange="uploadPDB()" id="PDB" class="form-control" type="file" multiple  accept=".pdb">
-    </div>
+          <div id="input" class="mb-3">
+            <label for="formFileMultiple" class="form-label"></label>
+            <input
+              onchange="uploadPDB()"
+              id="PDB"
+              class="form-control"
+              type="file"
+              multiple
+              accept=".pdb"
+            />
+          </div>
 
+          <div
+            id="drop_zone"
+            ondrop="dropHandler(event);"
+            ondragover="dragOverHandler(event);"
+          >
+            <p>
+              Drag one or more files to this <i>drop zone</i>. En cours de
+              déploiment!!
+            </p>
+          </div>
+        </section>
 
-      <div
-  id="drop_zone"
-  ondrop="dropHandler(event);"
-  ondragover="dragOverHandler(event);">
-  <p>Drag one or more files to this <i>drop zone</i>. En cours de déploiment!!</p>
-</div>
-    <div id="affiche-prot">
-      <h2>Afficher la protéine 4QWO</h2>
-      <form>
-        <input
-          onclick="display3D()"
-          type="button"
-          name="affiche"
-          value="Afficher 4QWO"
-          accesskey="s"
-        />
-      </form>
+        <section id="affiche-prot">
+          <h2>Afficher la protéine 4QWO</h2>
+          <form>
+            <input
+              onclick="display3D()"
+              type="button"
+              name="affiche"
+              value="Afficher 4QWO"
+              accesskey="s"
+            />
+          </form>
+        </section>
+        <section id="proteine-enregistre">
+          <h2>Visualiser proteines déjà enregistrée</h2>
 
-    </div>
-      <div id="proteine-enregistre">
-        <h2>Visualiser proteines déjà enregistrée</h2>
-        
-        <input
-        onclick="a = initialize_4qwo(),display3D(a.get_pdb())"
-        type="button"
-        name="display_4QWO"
-        value="Afficher 4QWO"
-        accesskey="s"
-      />
+          <input
+            onclick="a = initialize_4qwo(),display3D(a.get_pdb())"
+            type="button"
+            name="display_4QWO"
+            value="Afficher 4QWO"
+            accesskey="s"
+          />
+        </section>
       </div>
-    </div>
 
       <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
       <div id="container-mol">
         <div id="container-01" class="mol-container"></div>
       </div>
-  
+    </div>
   </body>
 
   <link
