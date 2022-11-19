@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+
+<body class="container-principal">
+  
+<div id="header"></div>
+   
+<div id="container-chargement" class="container-chargement">
+  <div id="import-pdb" class="import-pdb">  
+    <h2>Importer un fichier PDB</h2>
+
+    <div class="mb-3">
+      <label for="formFileMultiple" class="form-label"></label>
+      <input onchange="uploadPDB()" id="charge" class="form-control" type="file" multiple  accept=".pdb">
+    </div>
+
+
+      <div
+  id="drop_zone"
+  ondrop="dropHandler(event);"
+  ondragover="dragOverHandler(event);">
+  <p>Drag one or more files to this <i>drop zone</i>. En cours de déploiment!!</p>
+</div>
+     
+
+  </div>
+  
+  <div id="import-fasta" class="import-fasta">
+      <h2>Importer un fichier Fasta</h2>
+      
+        <div class="mb-3">
+          <label for="formFileMultiple" class="form-label"></label>
+          <input id="charge" class="form-control" type="file" multiple  accept=".fasta">
+        </div>
+
+          <div
+          id="drop_zone"
+          ondrop="dropHandler(event);"
+          ondragover="dragOverHandler(event);">
+          <p>Drag one or more files to this <i>drop zone</i>. En cours de déploiment!!</p>
+        </div>
+             
+    
+   
+    </div>
+  </div>
+
+</div>
+
+
+  </body>
+
+
+
+
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="stylesheet.css" />
+</html>

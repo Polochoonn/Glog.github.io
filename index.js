@@ -36,8 +36,8 @@ window.onload = function(){
             <li class="nav-item">
               <a
                 class="nav-link mx-2"
-                href="https://ent.u-bordeaux.fr/uPortal/f/welcome/normal/render.uP"
-                >Prediction</a
+                href="/chargement.html"
+                >Importation</a
               >
             </li>
             <li class="nav-item">
@@ -74,25 +74,45 @@ window.onload = function(){
 
 
 
-
-// navbar extend 
-
-var clients = document.getElementById('clients');
-var services = document.getElementById('services');
-
-clients.addEventListener('click', function() {
-  $(clients).toggleClass("active");
-  $(".parent:not(#clients)").toggleClass("invisible");
-}, false);
-
-services.addEventListener('click', function() {
-  $(services).toggleClass("active");
-  $(".parent:not(#services)").toggleClass("invisible");
-}, false);
-
-
 // Fonction de redirection 
 // pas utilse elle sert d'exemple pour l'instant
 function RedirectionHome(){
   document.location.href="./index.html";
+}
+
+
+
+
+
+
+
+// Pour le drag and drop fichier en cours...
+function dropHandler(ev) {
+  console.log('File(s) dropped');
+
+  // Prevent default behavior (Prevent file from being opened)
+  ev.preventDefault();
+
+  if (ev.dataTransfer.items) {
+    // Use DataTransferItemList interface to access the file(s)
+    [...ev.dataTransfer.items].forEach((item, i) => {
+      // If dropped items aren't files, reject them
+      if (item.kind === 'file') {
+        const file = item.getAsFile();
+        console.log(`… file[${i}].name = ${file.name}`);
+      }
+    });
+  } else {
+    // Use DataTransfer interface to access the file(s)
+    [...ev.dataTransfer.files].forEach((file, i) => {
+      console.log(`… file[${i}].name = ${file.name}`);
+    });
+  }
+}
+
+function dragOverHandler(ev) {
+  console.log('File(s) in drop zone');
+
+  // Prevent default behavior (Prevent file from being opened)
+  ev.preventDefault();
 }

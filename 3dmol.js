@@ -29,7 +29,7 @@
 
 
 
-  async function readFile(ev){
+async function readFile(ev){
     console.log(ev.target.files[0]);
     const file = ev.target.files[0]; //on récupère l'objet files
     const txt = await file.text();
@@ -41,6 +41,26 @@ function uploadFasta(){
     console.log("estes");
     console.log(input);
 }
+
+
+function uploadPDB(){
+    var pdb_file = document.getElementById("PDB").value;
+    console.log("test");
+    console.log(pdb_file);
+    showThis()
+}
+
+function hideThis(){
+    var obj = document.getElementById('d2');
+    obj.style.display = "none";
+    }
+function showThis()
+    {
+    var obj = document.getElementById('d2');
+    obj.style.display = "block";
+    }
+
+
 function display3D() {
     let element = $('#container-01');
     let config = { backgroundColor: ' #f0e8db' };
