@@ -67,12 +67,13 @@ function showThis()
 
     function display3D(protein) {
         console.log("Start 3D visualisation");
-        console.log("Protein",protein)
+        console.log(protein)
         let element = $('#container-01');
         let config = { backgroundColor: ' #f0e8db' };
         let viewer = $3Dmol.createViewer(element, config);
+        console.log("fdp");
         let pdbUri = protein.get_pdb();
-        console.log("PDP",pdbUri);
+        console.log(pdbUri);
         jQuery.ajax(pdbUri, {
             success: function (data) {
                 let v = viewer;
