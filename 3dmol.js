@@ -1,8 +1,4 @@
-
-
-
-
-/*class Protein {
+class Protein {
     id_pdb;
     fasta_file;
     pdb_file;
@@ -25,7 +21,8 @@
         return this.pdb_file;
     }
   }
- */ 
+ 
+
 
 
 
