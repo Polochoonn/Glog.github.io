@@ -89,11 +89,10 @@ function showThis()
     }
 
 
-
-window.onload = function(){
+function visualisation(molecule){
+    console.log(molecule);
     let test=
     document.querySelector("#molecule");
-    let molecule = "4QWO"
     test.innerHTML = `
     <iframe id="inlineFrameExample"
     title="Visualisation proteine connus"
