@@ -11,6 +11,21 @@
     <div id="header"></div>
 
 <div id="container-visualisation">
+  <div id="import-pdb" class="import-pdb">  
+    <h2>Importer un fichier PDB</h2>
+
+    <div class="mb-3">
+      <label for="formFileMultiple" class="form-label"></label>
+      <input onchange="uploadPDB()" id="PDB" class="form-control" type="file" multiple  accept=".pdb">
+    </div>
+
+
+      <div
+  id="drop_zone"
+  ondrop="dropHandler(event);"
+  ondragover="dragOverHandler(event);">
+  <p>Drag one or more files to this <i>drop zone</i>. En cours de déploiment!!</p>
+</div>
     <div id="affiche-prot">
       <h2>Afficher la protéine 4QWO</h2>
       <form>
@@ -22,7 +37,7 @@
           accesskey="s"
         />
       </form>
-      
+
     </div>
       <div id="proteine-enregistre">
         <h2>Visualiser proteines déjà enregistrée</h2>

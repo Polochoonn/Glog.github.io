@@ -36,8 +36,8 @@ window.onload = function(){
             <li class="nav-item">
               <a
                 class="nav-link mx-2"
-                href="/chargement.html"
-                >Importation</a
+                href="/prediction.html"
+                >Prediction</a
               >
             </li>
             <li class="nav-item">

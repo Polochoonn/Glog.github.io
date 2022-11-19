@@ -11,39 +11,25 @@
 <div id="header"></div>
    
 <div id="container-chargement" class="container-chargement">
-  <div id="import-pdb" class="import-pdb">  
-    <h2>Importer un fichier PDB</h2>
-
+ 
+  <div id="import-fasta" class="import-fasta">
+  <h2>Importer un fichier Fasta</h2>
+  
     <div class="mb-3">
       <label for="formFileMultiple" class="form-label"></label>
-      <input onchange="uploadPDB()" id="PDB" class="form-control" type="file" multiple  accept=".pdb">
+      <input id="charge" class="form-control" type="file" multiple  accept=".fasta">
     </div>
 
-
       <div
-  id="drop_zone"
-  ondrop="dropHandler(event);"
-  ondragover="dragOverHandler(event);">
-  <p>Drag one or more files to this <i>drop zone</i>. En cours de déploiment!!</p>
-</div>
-     
+      id="drop_zone"
+      ondrop="dropHandler(event);"
+      ondragover="dragOverHandler(event);">
+      <p>Drag one or more files to this <i>drop zone</i>. En cours de déploiment!!</p>
+    </div>
 
   </div>
   
-  <div id="import-fasta" class="import-fasta">
-      <h2>Importer un fichier Fasta</h2>
-      
-        <div class="mb-3">
-          <label for="formFileMultiple" class="form-label"></label>
-          <input id="charge" class="form-control" type="file" multiple  accept=".fasta">
-        </div>
-
-          <div
-          id="drop_zone"
-          ondrop="dropHandler(event);"
-          ondragover="dragOverHandler(event);">
-          <p>Drag one or more files to this <i>drop zone</i>. En cours de déploiment!!</p>
-        </div>
+  
              
     
    
