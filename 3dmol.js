@@ -36,9 +36,14 @@ async function readFile(ev){
     console.log(txt.length);
 }
 
+
+// pour upload 
+
+
+
 function uploadFasta(){
     var input = document.getElementById("charge").value;
-    console.log("estes");
+    console.log("test");
     console.log(input);
 }
 
@@ -47,8 +52,10 @@ function uploadPDB(){
     var pdb_file = document.getElementById("PDB").value;
     console.log("test");
     console.log(pdb_file);
-    showThis()
 }
+
+
+// Test pour faire apparaitre un bouton 
 
 function hideThis(){
     var obj = document.getElementById('d2');
