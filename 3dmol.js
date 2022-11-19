@@ -65,23 +65,26 @@ function showThis()
     }
 
 
-function display3D() {
-    let element = $('#container-01');
-    let config = { backgroundColor: ' #f0e8db' };
-    let viewer = $3Dmol.createViewer( element, config );
-  let pdbUri = './4qw0.pdb';
-  jQuery.ajax( pdbUri, { 
-    success: function(data) {
-      let v = viewer;
-      v.addModel( data, "pdb" );                       /* load data */
-      v.setStyle({}, {cartoon: {color: 'spectrum'}});  /* style all atoms */
-      v.zoomTo();                                      /* set camera */
-      v.render();                                      /* render scene */
-      v.zoom(1.2, 1000);                               /* slight zoom */
-    },
-    error: function(hdr, status, err) {
-      console.error( "Failed to load PDB " + pdbUri + ": " + err );
-    },
-})
-}
-
+    function display3D(protein) {
+        console.log("Start 3D visualisation");
+        console.log(protein)
+        let element = $('#container-01');
+        let config = { backgroundColor: ' #f0e8db' };
+        let viewer = $3Dmol.createViewer(element, config);
+        console.log("fdp");
+        let pdbUri = protein.get_pdb();
+        console.log(pdbUri);
+        jQuery.ajax(pdbUri, {
+            success: function (data) {
+                let v = viewer;
+                v.addModel("pdb:1MO8", "pdb");                       /* load data */
+                v.setStyle({}, { cartoon: { color: 'spectrum' } });  /* style all atoms */
+                v.zoomTo();                                      /* set camera */
+                v.render();                                      /* render scene */
+                v.zoom(1.2, 1000);                               /* slight zoom */
+            },
+            error: function (hdr, status, err) {
+                console.error("Failed to load PDB " + pdbUri + ": " + err);
+            },
+        })
+    }
