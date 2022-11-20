@@ -19,19 +19,13 @@ function showThis(id)
   }
 
 
-
 // Fonction de redirection 
 // pas utilse elle sert d'exemple pour l'instant
 function RedirectionHome(){
     document.location.href="./index.html";
   }
   
-  
-  
-  
-  
-  
-  
+
   // Pour le drag and drop fichier en cours...
   function dropHandler(ev) {
     console.log('File(s) dropped');
