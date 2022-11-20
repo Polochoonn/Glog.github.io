@@ -81,7 +81,10 @@ body {
  
 }
 
-
+.liste-molecule{
+  display: grid;
+  
+}
 
 
 /* navbar  */

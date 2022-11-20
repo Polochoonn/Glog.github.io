@@ -37,19 +37,10 @@
             </p>
           </div>
         </section>
-
-        <section id="molecule">
-          <h2>Afficher la protéine 4QWO</h2>
-          <form>
-            <input
-              onclick="visualisation('4QWO')"
-              type="button"
-              name="affiche"
-              value="Afficher 4QWO"
-              accesskey="s"
-            />
-          </form>
+        <section>
+          <h2>Rechercher une molécule par son id PDB</h2>
         </section>
+
         <section id="proteine-enregistre">
           <h2>Visualiser proteines déjà enregistrée</h2>
 
@@ -61,8 +52,33 @@
             accesskey="s"
           />
         </section>
+        <section id="molecule-connus">
+          <h2>Protéines connus de Monkeypox</h2>
+          <div class="liste-molecule">
+            <input
+              onclick="visualisation('4QWO')"
+              type="button"
+              value="Visualisation 4QWO"
+            />
+            <input
+              onclick="visualisation('4QWO')"
+              type="button"
+              value="Visualisation 4QWO"
+            />
+            <input
+              onclick="visualisation('4QWO')"
+              type="button"
+              value="Visualisation 4QWO"
+            />
+            <input
+              onclick="visualisation('4QWO')"
+              type="button"
+              value="Visualisation 4QWO"
+            />
+          </div>
+        </section>
       </div>
-
+      <div name="molecule" id="molecule"></div>
       <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
       <div id="container-mol">
         <div id="container-01" class="mol-container"></div>

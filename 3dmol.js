@@ -54,13 +54,13 @@ function uploadPDB(){
 
 // Test pour faire apparaitre un bouton 
 
-function hideThis(){
-    var obj = document.getElementById('d2');
+function hideThis(id){
+    var obj = document.getElementById(id);
     obj.style.display = "none";
     }
-function showThis()
+function showThis(id)
     {
-    var obj = document.getElementById('d2');
+    var obj = document.getElementById(id);
     obj.style.display = "block";
     }
 
