@@ -43,9 +43,12 @@ body {
 
 .container-vcarre-v{
   background-color: lightblue;
+  padding: 0px;
+  margin: 0px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+
 }
 
 
@@ -62,8 +65,9 @@ body {
 #container-mol {
     border:5px solid black;
     padding:0px;
-    width: 50%;
-    margin-top:5%;
+    width: 900px;
+    height:80vh;
+    margin:0%;
     
    }
 
@@ -71,13 +75,15 @@ body {
         width: 70%;
         height: 60vh;
         position: relative;
-       
+     
       }
 #container-visualisation{
   background-color: orange;
   width: 25%;
   display: grid;
   margin-left: 0px;
+ 
+       
  
 }
 
@@ -86,6 +92,10 @@ body {
   
 }
 
+#inlineFrameExample{
+  width: 800px;
+  height: 80vh;
+}
 
 /* navbar  */
 

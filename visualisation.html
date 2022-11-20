@@ -37,13 +37,6 @@
             </p>
           </div>
         </section>
-        <section>
-          <h2>Rechercher une molécule par son id PDB</h2>
-          <input type="search" id="mol_name"/>
-          <button onclick = "visualisation(get_name('mol_name'))">Search</button>
-  
-
-        </section>
 
         <section id="proteine-enregistre">
           <h2>Visualiser proteines déjà enregistrée</h2>
@@ -56,28 +49,37 @@
             accesskey="s"
           />
         </section>
+        <section>
+          <h2>Rechercher une molécule par son id PDB</h2>
+          <input type="search" id="mol_name" />
+          <button
+            onclick="hideThis('container-mol'),visualisation(get_name('mol_name'))"
+          >
+            Search
+          </button>
+        </section>
         <section id="molecule-connus">
           <h2>Protéines connus de Monkeypox</h2>
           <div class="liste-molecule">
             <input
-              onclick="hideThis('container-mol'),visualisation('4QWO')"
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('4QWO')"
               type="button"
               value="Visualisation 4QWO"
             />
             <input
-              onclick="hideThis('container-mol'),visualisation('4QWO')"
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('1CL4')"
               type="button"
-              value="Visualisation 4QWO"
+              value="Visualisation 1CL4"
             />
             <input
-              onclick="hideThis('container-mol'),visualisation('4QWO')"
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('5LMY')"
               type="button"
-              value="Visualisation 4QWO"
+              value="Visualisation 5LMY"
             />
             <input
-              onclick="hideThis('container-mol'),visualisation('4QWO')"
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('2F76')"
               type="button"
-              value="Visualisation 4QWO"
+              value="Visualisation 2F76"
             />
           </div>
         </section>
