@@ -1,6 +1,38 @@
+// Fonciton 
+class Protein {
+    id_pdb;
+    fasta_file;
+    pdb_file;
+
+    constructor(id_pdb) {
+      this.id_pdb = id_pdb;
+    }
+
+    set_fasta(fasta_file){
+        this.fasta_file= fasta_file;
+    }
+    set_pdb(pdb_file){
+        this.pdb_file= pdb_file;
+    }
+
+    get_fasta(){
+        return this.fasta_file;
+    }
+    get_pdb(){
+        return this.pdb_file;
+    }
+  }
+ 
+
+
 function uploadPDB(){
     var pdb_file = document.getElementById("PDB").value;
     return pdb_file
+}
+
+function uploadFasta(){
+    var fasta_file = document.getElementById("charge").value;
+    return fasta
 }
 
 
