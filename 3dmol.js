@@ -93,7 +93,7 @@ function visualisation(molecule){
     test.innerHTML = `
     <iframe id="inlineFrameExample"
     title="Visualisation proteine connus"
-    src="https://3Dmol.org/viewer.html?pdb=${molecule}">
+    src="https://3Dmol.org/viewer.html?pdb=${molecule}&style=cartoon:color~spectrum">
 </iframe>
   `
   }
