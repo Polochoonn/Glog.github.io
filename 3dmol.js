@@ -102,4 +102,9 @@ function visualisation(molecule){
 </iframe>
   `
   }
-  
+
+
+function get_name(id){
+    var name = document.getElementById(id).value;
+    return name;
+  }
