@@ -1,10 +1,7 @@
-
- function initialize_4qwo(){
+function initialize_4qwo(){
     let protein_4qw0 = new Protein("4qWo");
-    let test =  fetch("https://files.rcsb.org/view/4QWO.pdb").then(r=> r );
-    console.log(test);
-    protein_4qw0.set_pdb(test);
-    protein_4qw0.set_fasta("/rcsb_pdb_4QWO.fasta");
-    
+    protein_4qw0.set_pdb("/4qw0.pdb");
+    protein_4qw0.set_fasta("./rcsb_pdb_4QWO.fasta");
+    console.log(protein_4qw0);
     return protein_4qw0;
     }

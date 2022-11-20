@@ -51,12 +51,14 @@
         </section>
         <section>
           <h2>Rechercher une molécule par son id PDB</h2>
-          <input type="search" id="mol_name" />
-          <button
-            onclick="hideThis('container-mol'),showThis('molecule'),visualisation(get_name('mol_name'))"
-          >
-            Search
-          </button>
+          <div class="searchbox">
+            <input type="search" id="mol_name" placeholder="Exemple 1CL4" />
+            <button
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation(get_name('mol_name'))"
+              id="search_button"
+              onclick="visualisation(get_name('mol_name'))"
+            ></button>
+          </div>
         </section>
         <section id="molecule-connus">
           <h2>Protéines connus de Monkeypox</h2>

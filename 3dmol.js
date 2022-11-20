@@ -66,27 +66,24 @@ function showThis(id)
 
 
     function display3D(protein) {
-        console.log("Start 3D visualisation");
-        console.log("Proteine",protein)
         let element = $('#container-01');
         let config = { backgroundColor: ' #f0e8db' };
-        let viewer = $3Dmol.createViewer(element, config);
-        let pdbUri = protein.get_pdb();
-        console.log("PDB",pdbUri);
-        jQuery.ajax(pdbUri, {
-            success: function (data) {
-                let v = viewer;
-                v.addModel("pdb:1MO8", "pdb");                       /* load data */
-                v.setStyle({}, { cartoon: { color: 'spectrum' } });  /* style all atoms */
-                v.zoomTo();                                      /* set camera */
-                v.render();                                      /* render scene */
-                v.zoom(1.2, 1000);                               /* slight zoom */
-            },
-            error: function (hdr, status, err) {
-                console.error("Failed to load PDB " + pdbUri + ": " + err);
-            },
-        })
-    }
+        let viewer = $3Dmol.createViewer( element, config );
+      let pdbUri = protein.get_pdb();
+      jQuery.ajax( pdbUri, { 
+        success: function(data) {
+          let v = viewer;
+          v.addModel( data, "pdb" );                       /* load data */
+          v.setStyle({}, {cartoon: {color: 'spectrum'}});  /* style all atoms */
+          v.zoomTo();                                      /* set camera */
+          v.render();                                      /* render scene */
+          v.zoom(1.2, 1000);                               /* slight zoom */
+        },
+        error: function(hdr, status, err) {
+          console.error( "Failed to load PDB " + pdbUri + ": " + err );
+        },
+    })
+}
 
 
 function visualisation(molecule){
