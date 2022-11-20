@@ -38,31 +38,55 @@
           </div>
         </section>
 
-        <section id="affiche-prot">
-          <h2>Afficher la protéine 4QWO</h2>
-          <form>
-            <input
-              onclick="display3D()"
-              type="button"
-              name="affiche"
-              value="Afficher 4QWO"
-              accesskey="s"
-            />
-          </form>
-        </section>
         <section id="proteine-enregistre">
           <h2>Visualiser proteines déjà enregistrée</h2>
 
           <input
-            onclick="a = initialize_4qwo(),display3D(a.get_pdb())"
+            onclick="a = initialize_4qwo(),hideThis('molecule'),showThis('container-mol'),display3D(a)"
             type="button"
             name="display_4QWO"
             value="Afficher 4QWO"
             accesskey="s"
           />
         </section>
+        <section>
+          <h2>Rechercher une molécule par son id PDB</h2>
+          <div class="searchbox">
+            <input type="search" id="mol_name" placeholder="Exemple 1CL4" />
+            <button
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation(get_name('mol_name'))"
+              id="search_button"
+              onclick="visualisation(get_name('mol_name'))"
+            ></button>
+          </div>
+        </section>
+        <section id="molecule-connus">
+          <h2>Protéines connus de Monkeypox</h2>
+          <div class="liste-molecule">
+            <input
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('4QWO')"
+              type="button"
+              value="Visualisation 4QWO"
+            />
+            <input
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('1CL4')"
+              type="button"
+              value="Visualisation 1CL4"
+            />
+            <input
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('5LMY')"
+              type="button"
+              value="Visualisation 5LMY"
+            />
+            <input
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('2F76')"
+              type="button"
+              value="Visualisation 2F76"
+            />
+          </div>
+        </section>
       </div>
-
+      <div name="molecule" id="molecule"></div>
       <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
       <div id="container-mol">
         <div id="container-01" class="mol-container"></div>

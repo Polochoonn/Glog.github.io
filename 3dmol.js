@@ -54,34 +54,52 @@ function uploadPDB(){
 
 // Test pour faire apparaitre un bouton 
 
-function hideThis(){
-    var obj = document.getElementById('d2');
+function hideThis(id){
+    var obj = document.getElementById(id);
     obj.style.display = "none";
     }
-function showThis()
+function showThis(id)
     {
-    var obj = document.getElementById('d2');
+    var obj = document.getElementById(id);
     obj.style.display = "block";
     }
 
 
-function display3D() {
-    let element = $('#container-01');
-    let config = { backgroundColor: ' #f0e8db' };
-    let viewer = $3Dmol.createViewer( element, config );
-  let pdbUri = './4qw0.pdb';
-  jQuery.ajax( pdbUri, { 
-    success: function(data) {
-      let v = viewer;
-      v.addModel( data, "pdb" );                       /* load data */
-      v.setStyle({}, {cartoon: {color: 'spectrum'}});  /* style all atoms */
-      v.zoomTo();                                      /* set camera */
-      v.render();                                      /* render scene */
-      v.zoom(1.2, 1000);                               /* slight zoom */
-    },
-    error: function(hdr, status, err) {
-      console.error( "Failed to load PDB " + pdbUri + ": " + err );
-    },
-})
+    function display3D(protein) {
+        let element = $('#container-01');
+        let config = { backgroundColor: ' #f0e8db' };
+        let viewer = $3Dmol.createViewer( element, config );
+      let pdbUri = protein.get_pdb();
+      jQuery.ajax( pdbUri, { 
+        success: function(data) {
+          let v = viewer;
+          v.addModel( data, "pdb" );                       /* load data */
+          v.setStyle({}, {cartoon: {color: 'spectrum'}});  /* style all atoms */
+          v.zoomTo();                                      /* set camera */
+          v.render();                                      /* render scene */
+          v.zoom(1.2, 1000);                               /* slight zoom */
+        },
+        error: function(hdr, status, err) {
+          console.error( "Failed to load PDB " + pdbUri + ": " + err );
+        },
+    })
 }
 
+
+function visualisation(molecule){
+    console.log(molecule);
+    let test=
+    document.querySelector("#molecule");
+    test.innerHTML = `
+    <iframe id="inlineFrameExample"
+    title="Visualisation proteine connus"
+    src="https://3Dmol.org/viewer.html?pdb=${molecule}&style=cartoon:color~spectrum">
+</iframe>
+  `
+  }
+
+
+function get_name(id){
+    var name = document.getElementById(id).value;
+    return name;
+  }
