@@ -19,7 +19,7 @@
           
               <label for="formFileMultiple" class="form-label"></label>
               <input
-                onchange="a=uploadPDB(),b=initialize_4qwo(a), visualisation(b.get_pdb())"
+                onchange="a=uploadPDB(),b=initialize_4qwo(a),hideThis('molecule'),showThis('container-mol'), visualisation(b.get_pdb())"
                 id="upload_pdb"
                 class="form-control"
                 type="file"
