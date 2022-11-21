@@ -12,31 +12,35 @@
 
     <div class="container-vcarre-v">
       <div id="container-visualisation">
-        <section id="import-pdb" class="import-pdb">
+        <div id="import-pdb" class="import-pdb">
           <h2>Importer un fichier PDB</h2>
-
+          <div class="border-drag">
           <div id="input" class="mb-3">
-            <label for="formFileMultiple" class="form-label"></label>
-            <input
-              onchange="uploadPDB()"
-              id="PDB"
-              class="form-control"
-              type="file"
-              multiple
-              accept=".pdb"
-            />
+          
+              <label for="formFileMultiple" class="form-label"></label>
+              <input
+                onchange="uploadPDB()"
+                id="PDB"
+                class="form-control"
+                type="file"
+                multiple
+                accept=".pdb"
+              />
+            
           </div>
 
-          <div
-            id="drop_zone"
-            ondrop="dropHandler(event);"
-            ondragover="dragOverHandler(event);"
-          >
-            <p>
-              Drag one or more files to this <i>drop zone</i>. En cours de
-              déploiment!!
-            </p>
+            <div
+              id="drop_zone"
+              ondrop="dropHandler(event);"
+              ondragover="dragOverHandler(event);"
+            >
+              <p>
+                Drag one or more files to this <i>drop zone</i>. En cours de
+                déploiment!!
+              </p>
+            </div>
           </div>
+        </div>
         </section>
 
         <section id="proteine-enregistre">
