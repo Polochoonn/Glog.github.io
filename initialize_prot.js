@@ -26,7 +26,8 @@ class Protein {
 
 
 function uploadPDB(){
-    var pdb_file = document.getElementById("upload_pdb").value;
+    var pdb_file = document.getElementById("upload_pdb").files[0].name;
+    alert(pdb_file);
     return pdb_file
 }
 
@@ -38,7 +39,7 @@ function uploadFasta(){
 
 function initialize_4qwo(a){
     let protein_4qw0 = new Protein("molecule");
-    protein_4qw0.set_pdb("/4qw0.pdb");
+    protein_4qw0.set_pdb(a);
     protein_4qw0.set_fasta("./rcsb_pdb_4QWO.fasta");
     console.log(protein_4qw0);
     return protein_4qw0;

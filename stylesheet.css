@@ -12,12 +12,7 @@ body {
     }
 
 /* Pour l'image sur index */
-    .index{
-        background-image:url(https://qtxasset.com/quartz/qcloud5/media/image/monkeypox.jpg?VersionId=ceL6JETFE2qUDkzrikRPRVMnYPDg6dvJ);
-        background-repeat:no-repeat;
-        background-size: 100% auto;
-      
-    }
+   
     
 /* Pour les drop and drang  */
     #drop_zone {
@@ -29,7 +24,10 @@ body {
   border: 2px dashed #c8ad7f;
 }
 
-
+#joli{
+   width:100vw; 
+   height:100vh;
+}
 /* navbar  */
 
 
