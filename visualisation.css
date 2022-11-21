@@ -3,7 +3,7 @@
 
 
 .container-vcarre-v{
-    background-color: lightblue;
+    /* background-color: lightblue; */
     padding: 0px;
     margin: 0px;
     display: flex;
@@ -40,7 +40,7 @@
        
         }
   #container-visualisation{
-    background-color: orange;
+    /* background-color: orange; */
     width: 25%;
     display: grid;
     margin-left: 0px;
@@ -63,7 +63,7 @@
   /* Pour le boutton search  */
   
   .searchbox{
-    background-color:#fffbf8;
+    /* background-color:#fffbf8; */
     padding:10px;
     width:90%;
     -webkit-box-sizing:border-box;
