@@ -1,3 +1,6 @@
+// Pour notre page index.html
+
+
 // Fonction de extend pour la navbar
 
 window.onload = function(){
@@ -69,50 +72,18 @@ window.onload = function(){
         </div>
       </div>
     </nav>
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
 `
 }
 
 
-
-// Fonction de redirection 
-// pas utilse elle sert d'exemple pour l'instant
-function RedirectionHome(){
-  document.location.href="./index.html";
-}
-
-
-
-
-
-
-
-// Pour le drag and drop fichier en cours...
-function dropHandler(ev) {
-  console.log('File(s) dropped');
-
-  // Prevent default behavior (Prevent file from being opened)
-  ev.preventDefault();
-
-  if (ev.dataTransfer.items) {
-    // Use DataTransferItemList interface to access the file(s)
-    [...ev.dataTransfer.items].forEach((item, i) => {
-      // If dropped items aren't files, reject them
-      if (item.kind === 'file') {
-        const file = item.getAsFile();
-        console.log(`… file[${i}].name = ${file.name}`);
-      }
-    });
-  } else {
-    // Use DataTransfer interface to access the file(s)
-    [...ev.dataTransfer.files].forEach((file, i) => {
-      console.log(`… file[${i}].name = ${file.name}`);
-    });
-  }
-}
-
-function dragOverHandler(ev) {
-  console.log('File(s) in drop zone');
-
-  // Prevent default behavior (Prevent file from being opened)
-  ev.preventDefault();
-}
