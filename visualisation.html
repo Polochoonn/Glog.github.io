@@ -19,8 +19,8 @@
           
               <label for="formFileMultiple" class="form-label"></label>
               <input
-                onchange="uploadPDB()"
-                id="PDB"
+                onchange="a=uploadPDB(),b=initialize_4qwo(a), visualisation(b.get_pdb())"
+                id="upload_pdb"
                 class="form-control"
                 type="file"
                 multiple

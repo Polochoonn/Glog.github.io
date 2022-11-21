@@ -26,19 +26,19 @@ class Protein {
 
 
 function uploadPDB(){
-    var pdb_file = document.getElementById("PDB").value;
+    var pdb_file = document.getElementById("upload_pdb").value;
     return pdb_file
 }
 
 function uploadFasta(){
-    var fasta_file = document.getElementById("charge").value;
+    var fasta_file = document.getElementById("upload_fasta").value;
     return fasta
 }
 
 
-function initialize_4qwo(){
+function initialize_4qwo(a){
     let protein_4qw0 = new Protein("molecule");
-    protein_4qw0.set_pdb("/4qw0.pdb");
+    protein_4qw0.set_pdb(a);
     protein_4qw0.set_fasta("./rcsb_pdb_4QWO.fasta");
     console.log(protein_4qw0);
     return protein_4qw0;
