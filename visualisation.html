@@ -15,22 +15,18 @@
         <div id="import-pdb" class="import-pdb">
           <h2>Importer un fichier PDB</h2>
           <div class="border-drag">
-          <div id="input" class="mb-3">
-          
+            <div id="input" class="mb-3">
               <label for="formFileMultiple" class="form-label"></label>
+
               <input
-             
-                onchange="a=uploadPDB(),b=initialize_4qwo(a),hideThis('molecule'),showThis('container-mol'), display3D(b)"
+                onclick="test()"
                 id="upload_pdb"
                 class="form-control"
                 type="file"
                 multiple
                 accept=".pdb"
               />
-              
-              
-            
-          </div>
+            </div>
 
             <div
               id="drop_zone"
@@ -44,7 +40,6 @@
             </div>
           </div>
         </div>
-        </section>
 
         <section id="proteine-enregistre">
           <h2>Visualiser proteines déjà enregistrée</h2>
