@@ -15,44 +15,19 @@
         <div id="import-pdb" class="import-pdb">
           <h2>Importer un fichier PDB</h2>
           <div class="border-drag">
-            <div id="input" class="mb-3">
-              <label for="formFileMultiple" class="form-label"></label>
-
-              <input
-                onclick="test()"
-                id="upload_pdb"
-                class="form-control"
+            <div class="upload-container">
+              <input type="file" id="upload_pdb"
                 type="file"
-                multiple
-                accept=".pdb"
-              />
+                multiple ="true"
+                accept=".pdb" />
             </div>
-
-            <div
-              id="drop_zone"
-              ondrop="dropHandler(event);"
-              ondragover="dragOverHandler(event);"
-            >
-              <p>
-                Drag one or more files to this <i>drop zone</i>. En cours de
-                déploiment!!
-              </p>
-            </div>
+            <br />
+            <button class="upload-btn" onclick="uploadFiles(),hideThis('molecule'),showThis('container-mol'),test()">Submit</button>
           </div>
         </div>
 
-        <section id="proteine-enregistre">
-          <h2>Visualiser proteines déjà enregistrée</h2>
-
-          <input
-            onclick="a = initialize_4qwo(),hideThis('molecule'),showThis('container-mol'),display3D(a)"
-            type="button"
-            name="display_4QWO"
-            value="Afficher 4QWO"
-            accesskey="s"
-          />
-        </section>
-        <section>
+    
+        <section id ="recherche">
           <h2>Rechercher une molécule par son id PDB</h2>
           <div class="searchbox">
             <input type="search" id="mol_name" placeholder="Exemple 1CL4" />

@@ -45,7 +45,7 @@
    
   }
   
-  
+ 
   .liste-molecule{
     display: grid;
     
@@ -131,3 +131,37 @@
     outline:0;
   }
   
+
+
+    
+/* Pour les drop and drang  */
+.upload-container {
+  position: relative;
+}
+.upload-container input {
+  border: 1px solid #92b0b3;
+  background: #f1f1f1;
+  outline: 2px dashed #92b0b3;
+  outline-offset: -10px;
+  padding: 20% 0px 20% 25%;
+  text-align: center !important;
+  width: 100%;
+}
+
+.upload-container input:hover {
+  background: #ddd;
+}
+
+.upload-container:before {
+  position: absolute;
+  bottom: 30%;
+  left: 30%;
+  content: " Ou glisser déposer";
+  color: #3f8188;
+  font-weight: 900;
+}
+
+.upload-btn {
+  margin-left: 40%;
+  padding: 2% 4%;
+}

@@ -28,21 +28,11 @@ class Protein {
   
 
 
-  function uploadPDB(){
-  
-        var pdb_file = document.getElementById('upload_pdb').files[0];
-
-  
-    
-
-    return pdb_file
-  }
 
 
 
 function test(){
-document.getElementById("upload_pdb").addEventListener("change",function(){
-    var file = this.files[0];
+    var file = document.getElementById('upload_pdb').files[0];
     var reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
@@ -69,9 +59,9 @@ document.getElementById("upload_pdb").addEventListener("change",function(){
 
      
 //     }
-},false);
-
 }
+
+
 
 // alert(pdb_file);
 
