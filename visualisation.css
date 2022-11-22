@@ -140,7 +140,7 @@
 }
 .upload-container input {
   border: 1px solid #92b0b3;
-  background: #f1f1f1;
+  background: #f0e8db;
   outline: 2px dashed #92b0b3;
   outline-offset: -10px;
   padding: 20% 0px 20% 25%;
@@ -149,7 +149,7 @@
 }
 
 .upload-container input:hover {
-  background: #ddd;
+  background: #f0e8db;
 }
 
 .upload-container:before {

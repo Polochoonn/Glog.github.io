@@ -16,18 +16,25 @@
           <h2>Importer un fichier PDB</h2>
           <div class="border-drag">
             <div class="upload-container">
-              <input type="file" id="upload_pdb"
+              <input
                 type="file"
-                multiple ="true"
-                accept=".pdb" />
+                id="upload_pdb"
+                type="file"
+                multiple="true"
+                accept=".pdb"
+              />
             </div>
             <br />
-            <button class="upload-btn" onclick="uploadFiles(),hideThis('molecule'),showThis('container-mol'),test()">Submit</button>
+            <button
+              class="upload-btn"
+              onclick="uploadFiles(),hideThis('molecule'),showThis('container-mol'),test()"
+            >
+              Visualiser
+            </button>
           </div>
         </div>
 
-    
-        <section id ="recherche">
+        <section id="recherche">
           <h2>Rechercher une molécule par son id PDB</h2>
           <div class="searchbox">
             <input type="search" id="mol_name" placeholder="Exemple 1CL4" />
