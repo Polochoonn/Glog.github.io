@@ -11,9 +11,58 @@
     <div id="header"></div>
 
     <div class="container-vcarre-v">
-      <div id="container-visualisation">
-        <div id="import-pdb" class="import-pdb">
-          <h2>Importer un fichier PDB</h2>
+      <section id="container-visualisation">
+        <section id="recherche">
+          <h1>Rechercher</h1>
+          <h2>Vous pouvez rechercher une molécule par son identifiant PDB</h2>
+          <div class="searchbox">
+            <input type="search" id="mol_name" placeholder="Exemple 1CL4" />
+            <button
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation(get_name('mol_name'))"
+              id="search_button"
+              onclick="visualisation(get_name('mol_name'))"
+            ></button>
+          </div>
+        </section>
+        <section id="molecule-connus">
+          <h1>Protéines</h1>
+          <h2>
+            Vous pouvez visualiser plusieurs protéines connus de Monkeypox
+          </h2>
+          <div class="liste-molecule">
+            <input
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('4QWO')"
+              class="buttonbox"
+              type="button"
+              value="Visualisation 4QWO"
+            />
+            <input
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('1CL4')"
+              class="buttonbox"
+              type="button"
+              value="Visualisation 1CL4"
+            />
+            <input
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('5LMY')"
+              class="buttonbox"
+              type="button"
+              value="Visualisation 5LMY"
+            />
+            
+            <input
+              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('2F76')"
+              class="buttonbox"
+              type="button"
+              value="Visualisation 2F76"
+              
+            />
+          </div>
+        </section>
+        <section id="import-pdb" class="import-pdb">
+          <h1>Importer</h1>
+          <h2>
+            Vous pouvez importer un fichier PDB pour pouvoir le visualiser
+          </h2>
           <div class="border-drag">
             <div class="upload-container">
               <input
@@ -32,50 +81,16 @@
               Visualiser
             </button>
           </div>
-        </div>
+        </section>
 
-        <section id="recherche">
-          <h2>Rechercher une molécule par son id PDB</h2>
-          <div class="searchbox">
-            <input type="search" id="mol_name" placeholder="Exemple 1CL4" />
-            <button
-              onclick="hideThis('container-mol'),showThis('molecule'),visualisation(get_name('mol_name'))"
-              id="search_button"
-              onclick="visualisation(get_name('mol_name'))"
-            ></button>
-          </div>
-        </section>
-        <section id="molecule-connus">
-          <h2>Protéines connus de Monkeypox</h2>
-          <div class="liste-molecule">
-            <input
-              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('4QWO')"
-              type="button"
-              value="Visualisation 4QWO"
-            />
-            <input
-              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('1CL4')"
-              type="button"
-              value="Visualisation 1CL4"
-            />
-            <input
-              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('5LMY')"
-              type="button"
-              value="Visualisation 5LMY"
-            />
-            <input
-              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('2F76')"
-              type="button"
-              value="Visualisation 2F76"
-            />
-          </div>
-        </section>
-      </div>
+
+      </section>
       <div name="molecule" id="molecule"></div>
       <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
-      <div id="container-mol">
-        <div id="container-01" class="mol-container"></div>
-      </div>
+    </div>
+    <p>Fichier pdb visu ou telecharger</p>
+    <div id="container-mol">
+      <div id="container-01" class="mol-container"></div>
     </div>
   </body>
   <link rel="stylesheet" href="stylesheet.css" />

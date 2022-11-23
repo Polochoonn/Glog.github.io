@@ -37,15 +37,80 @@
   #container-visualisation{
     /* background-color: orange; */
     
-    width: 35%;
-    display: grid;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly; 
     padding: 1%;
    
          
    
   }
   
- 
+  #recherche,#molecule-connus,#import-pdb{
+    padding: 1%;
+  }
+
+
+  /* CSS */
+.buttonbox {
+    appearance: button;
+    background-color: #669bbc;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+}
+  
+  .buttonbox:after {
+    background-clip: padding-box;
+    background-color: #669bbc;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .buttonbox:main,
+  .buttonbox:focus {
+    user-select: auto;
+  }
+  
+  .buttonbox:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  .buttonbox:disabled {
+    cursor: auto;
+  }
   .liste-molecule{
     display: grid;
     
@@ -70,7 +135,7 @@
     border-radius:6px;
     -webkit-box-shadow:
         0 2px 4px 0 rgba(72, 72, 72, 0.83),
-        0 10px 15px 0 rgba(126, 126, 126, 0.12),
+        0 10px 15px 0 rgba(142, 9, 9, 0.12),
         0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset, 
         0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
     -moz-box-shadow: 
@@ -123,7 +188,7 @@
     background-position: 10px 5px;
     background-color:transparent;
     -webkit-background-size:20px 20px;
-    background-size:20px 20px;
+    background-size:25px 25px;
     border:none;
     cursor:pointer;
   }
@@ -137,15 +202,19 @@
 /* Pour les drop and drang  */
 .upload-container {
   position: relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 .upload-container input {
+
   border: 1px solid #92b0b3;
   background: #f0e8db;
   outline: 2px dashed #92b0b3;
   outline-offset: -10px;
   padding: 20% 0px 20% 25%;
   text-align: center !important;
-  width: 100%;
+  width: 80%;
 }
 
 .upload-container input:hover {
@@ -154,10 +223,10 @@
 
 .upload-container:before {
   position: absolute;
-  bottom: 30%;
-  left: 30%;
+  bottom: 10%;
+  left: 20%;
   content: " Ou glisser déposer";
-  color: #3f8188;
+  color: #669bbc;
   font-weight: 900;
 }
 
