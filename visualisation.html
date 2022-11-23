@@ -18,7 +18,7 @@
           <div class="searchbox">
             <input type="search" id="mol_name" placeholder="Exemple 1CL4" />
             <button
-              onclick="hideThis('container-mol'),showThis('molecule'),visualisation(get_name('mol_name'))"
+              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation(get_name('mol_name'))"
               id="search_button"
               onclick="visualisation(get_name('mol_name'))"
             ></button>
@@ -31,30 +31,29 @@
           </h2>
           <div class="liste-molecule">
             <input
-              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('4QWO')"
+              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('4QWO')"
               class="buttonbox"
               type="button"
-              value="Visualisation 4QWO"
+              value="4QWO"
             />
             <input
-              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('1CL4')"
+              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('1CL4')"
               class="buttonbox"
               type="button"
-              value="Visualisation 1CL4"
+              value="1CL4"
             />
             <input
-              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('5LMY')"
+              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('5LMY')"
               class="buttonbox"
               type="button"
-              value="Visualisation 5LMY"
+              value="5LMY"
             />
-            
+
             <input
-              onclick="hideThis('container-mol'),showThis('molecule'),visualisation('2F76')"
+              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('2F76')"
               class="buttonbox"
               type="button"
-              value="Visualisation 2F76"
-              
+              value="2F76"
             />
           </div>
         </section>
@@ -76,25 +75,77 @@
             <br />
             <button
               class="upload-btn"
-              onclick="uploadFiles(),hideThis('molecule'),showThis('container-mol'),test()"
+              onclick="uploadFiles(),hideThis('molecule'),hideThis('visualisation'),showThis('container-mol'),test()"
             >
               Visualiser
             </button>
           </div>
         </section>
-
-
-      </section>
      
-    </div>
-    <div class="container-load" name="molecule" id="molecule"></div>
-    <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+      <section id="download-pdb" class="download-pdb">
+      <h1>Télécharger</h1>
+      <h2>
+        Vous pouvez télecharger le PDB
+      </h2>
+      <div class="component">
+        <ul class="align">
+          <li>
+            <figure class="book">
+              <!-- Front -->
 
-    <div id="container-mol">
-      <div id="container-01" class="mol-container"></div>
+              <ul class="hardcover_front">
+                <li>
+                  <div class="coverDesign blue">
+                    <h1>PDB</h1>
+                    <p>BOOK</p>
+                  </div>
+                </li>
+                <li></li>
+              </ul>
+
+              <!-- Pages -->
+
+              <ul class="page">
+                <li></li>
+                <li>
+                  <a class="btn" href="#">Download</a>
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+
+              <!-- Back -->
+
+              <ul class="hardcover_back">
+                <li></li>
+                <li></li>
+              </ul>
+              <ul class="book_spine">
+                <li></li>
+                <li></li>
+              </ul>
+            </figure>
+          </li>
+        </ul>
+      </div>
     </div>
-    <p>Fichier pdb visu ou telecharger</p>
   </body>
+  </section>
+</section>
+  <section class="visualisation" id="visualisation">
+    <div class="container-text">
+      <h2>Visualisation</h2>
+    </div>
+   
+  </section>
+  <div class="container-load" name="molecule" id="molecule"></div>
+  <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+
+  <div id="container-mol">
+    <div id="container-01" class="mol-container"></div>
+  </div>
+  <link rel="stylesheet" href="livre.css" />
   <link rel="stylesheet" href="stylesheet.css" />
   <link rel="stylesheet" href="visualisation.css" />
 </html>

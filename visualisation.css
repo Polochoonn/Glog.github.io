@@ -17,13 +17,20 @@
     margin-top: 10%;
   }
   
-  
-  #container-mol, .container-load{
+  .container-load{
+    padding:0px;
+    width: 900px;
+    height:80vh;
+    margin-left:0%;
+    
+
+  }
+  #container-mol{
     
       padding:0px;
-      width: 900px;
+      width: 100vw;
       height:80vh;
-      margin-left:20%;
+      margin-left:0%;
       
       
      }
@@ -49,7 +56,8 @@
    
   }
   
-  #recherche,#molecule-connus,#import-pdb{
+  #recherche,#molecule-connus,#import-pdb,#download-pdb{
+    width: 100%;
     padding: 1%;
   }
 
@@ -123,7 +131,7 @@
   #inlineFrameExample{
     
     padding:1%;
-    width: 60vw;
+    width: 100vw;
     height: 90vh;
   }
   
@@ -238,3 +246,22 @@
   margin-left: 40%;
   padding: 2% 4%;
 }
+
+
+.visualisation {
+ 
+  width:100vw;
+  height:100vh;
+}
+
+.visualisation h2 {
+  padding:20%;
+  color: #c1121e68;
+}
+.container-text{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-left:20vw;
+  width: 60vw;
+  height: 50vh;
+}
+
