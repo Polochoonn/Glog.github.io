@@ -1,5 +1,6 @@
 /* Mise en forme générale */
 h1 { color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 2.2vw; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+a { color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.3vw; font-weight: bold; letter-spacing: -1px; }
 
 
 h2 { color: #c1121f; font-family: 'Open Sans', sans-serif; font-size: 1.5vw; font-weight: 300; line-height: 32px; margin: 0 0 20px; text-align: center; }
