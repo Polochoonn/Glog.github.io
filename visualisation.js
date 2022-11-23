@@ -23,7 +23,7 @@ function display3D(protein) {
   }
 
   )
-
+return v;
 
 }
 function modify_viewer(viewer) {
