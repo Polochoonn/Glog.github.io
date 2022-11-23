@@ -13,7 +13,7 @@ async function display3D(protein) {
 	} else {
 		jQuery.ajax(pdbUri, {
 			success: function (data) {
-
+				
 				glviewer.addModel(data, "pdb");                       /* load data */
 				glviewer.setStyle({}, { cartoon: { color: 'spectrum' } });  /* style all atoms */
 				glviewer.zoomTo();                                      /* set camera */
