@@ -37,6 +37,8 @@ async function display3D(protein) {
 
 
 
+
+
 function visualisation(molecule) {
 	console.log(molecule);
 	let test =

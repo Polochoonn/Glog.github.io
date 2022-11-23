@@ -42,7 +42,8 @@ body {
 }
 
 #joli{
-    width: 100vw;
+
+    width: 35vw;
     height: 100vh;
 }
 
@@ -76,4 +77,8 @@ body {
   .container-01 {
     width: 30%;
     height: 30%;
+  }
+  
+  #card_body {
+    color: #c1121f
   }

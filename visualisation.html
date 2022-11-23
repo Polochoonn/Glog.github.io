@@ -16,18 +16,18 @@
     <section id="container-visualisation">
       <section id="recherche">
         <h1>Rechercher</h1>
-        <h2>Vous pouvez rechercher une molécule par son identifiant PDB</h2>
+        <h2>Cherchez une protéine via son identifiant PDB</h2>
         <div class="searchbox">
-          <input type="search" id="pdb_id" placeholder=" 1ZNI" />
-          <button
-            id="search_button" onclick="hideThis('molecule'),hideThis('visualisation'),showThis('gldiv'),download_with_id('pdb:' + document.getElementById('pdb_id').value) "></button>
+          <input type="search" id="pdb_id" placeholder="1ZNI" />
+          <button id="search_button"
+            onclick="hideThis('molecule'),hideThis('visualisation'),showThis('gldiv'),download_with_id('pdb:' + document.getElementById('pdb_id').value) "></button>
 
         </div>
       </section>
       <section id="molecule-connus">
         <h1>Protéines</h1>
         <h2>
-          Vous pouvez visualiser plusieurs protéines connus de Monkeypox
+          Visualisez des protéines connues du virus Monkeypox
         </h2>
         <div class="liste-molecule">
           <input
@@ -49,7 +49,7 @@
       <section id="import-pdb" class="import-pdb">
         <h1>Importer</h1>
         <h2>
-          Vous pouvez importer un fichier PDB pour pouvoir le visualiser
+          Importez un fichier PDB pour le visualiser dans notre outil
         </h2>
         <div class="border-drag">
           <div class="upload-container">
@@ -66,7 +66,7 @@
       <section id="download-pdb" class="download-pdb">
         <h1>Télécharger</h1>
         <h2>
-          Vous pouvez télecharger le PDB
+        Téléchargez le fichier PDB
         </h2>
         <div class="component">
           <ul class="align">
@@ -118,7 +118,7 @@
   <div class="gldiv" id="gldiv">
     <h2>Visualisation</h2>
 
-    
+
   </div>
 
 </section>
@@ -137,7 +137,7 @@
     
   </div>
   <div id="container-01" class="mol-container"></div>
-  
+
 </div>
 <link rel="stylesheet" href="livre.css" />
 <link rel="stylesheet" href="stylesheet.css" />
