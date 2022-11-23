@@ -1,152 +1,146 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
-  <head>
-    <script type="text/javascript" src="index.js"></script>
-    <script type="text/javascript" src="visualisation.js"></script>
-    <script type="text/javascript" src="initialize_prot.js"></script>
-    <script type="text/javascript" src="usefull_function.js"></script>
-  </head>
 
-  <body>
-    <div id="header"></div>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="visualisation.js"></script>
+  <script type="text/javascript" src="initialize_prot.js"></script>
+  <script type="text/javascript" src="usefull_function.js"></script>
+</head>
 
-    <div class="container-vcarre-v">
-      <section id="container-visualisation">
-        <section id="recherche">
-          <h1>Rechercher</h1>
-          <h2>Vous pouvez rechercher une molécule par son identifiant PDB</h2>
-          <div class="searchbox">
-            <input type="search" id="mol_name" placeholder="Exemple 1CL4" />
-            <button
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation(get_name('mol_name'))"
-              id="search_button"
-              onclick="visualisation(get_name('mol_name'))"
-            ></button>
-          </div>
-        </section>
-        <section id="molecule-connus">
-          <h1>Protéines</h1>
-          <h2>
-            Vous pouvez visualiser plusieurs protéines connus de Monkeypox
-          </h2>
-          <div class="liste-molecule">
-            <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('4QWO')"
-              class="buttonbox"
-              type="button"
-              value="4QWO"
-            />
-            <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('1CL4')"
-              class="buttonbox"
-              type="button"
-              value="1CL4"
-            />
-            <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('5LMY')"
-              class="buttonbox"
-              type="button"
-              value="5LMY"
-            />
+<body>
+  <div id="header"></div>
 
-            <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('2F76')"
-              class="buttonbox"
-              type="button"
-              value="2F76"
-            />
+  <div class="container-vcarre-v">
+    <section id="container-visualisation">
+      <section id="recherche">
+        <h1>Rechercher</h1>
+        <h2>Vous pouvez rechercher une molécule par son identifiant PDB</h2>
+        <div class="searchbox">
+          <input type="search" id="pdb_id" placeholder=" 1ZNI" />
+          <button
+            id="search_button" onclick="hideThis('molecule'),hideThis('visualisation'),showThis('gldiv'),download_with_id('pdb:' + document.getElementById('pdb_id').value) "></button>
+
+        </div>
+      </section>
+      <section id="molecule-connus">
+        <h1>Protéines</h1>
+        <h2>
+          Vous pouvez visualiser plusieurs protéines connus de Monkeypox
+        </h2>
+        <div class="liste-molecule">
+          <input
+            onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('4QWO')"
+            class="buttonbox" type="button" value="4QWO" />
+          <input id="moldata_pdb_large"
+            onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('1CL4')"
+            class="buttonbox" type="button" value="1CL4" />
+          <input
+            onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('5LMY')"
+            class="buttonbox" type="button" value="5LMY" />
+
+          <input
+            onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('2F76')"
+            class="buttonbox" type="button" value="2F76" />
+          <input onclick="test()" class="buttonbox" type="button" value="1ZNI" />
+        </div>
+      </section>
+      <section id="import-pdb" class="import-pdb">
+        <h1>Importer</h1>
+        <h2>
+          Vous pouvez importer un fichier PDB pour pouvoir le visualiser
+        </h2>
+        <div class="border-drag">
+          <div class="upload-container">
+            <input type="file" id="upload_pdb" type="file" multiple="true" accept=".pdb" />
           </div>
-        </section>
-        <section id="import-pdb" class="import-pdb">
-          <h1>Importer</h1>
-          <h2>
-            Vous pouvez importer un fichier PDB pour pouvoir le visualiser
-          </h2>
-          <div class="border-drag">
-            <div class="upload-container">
-              <input
-                type="file"
-                id="upload_pdb"
-                type="file"
-                multiple="true"
-                accept=".pdb"
-              />
-            </div>
-            <br />
-            <button
-              class="upload-btn"
-              onclick="uploadFiles(),hideThis('molecule'),hideThis('visualisation'),showThis('container-mol'),a = test()"
-            >
-              Visualiser
-            </button>
-          <button class="cartoon-btn" onclick="console.log('aaaaa'),modify_viewer(a)" ></button>
-          </div>
-        </section>
-     
+          <br />
+          <button class="upload-btn"
+            onclick="uploadFiles(),hideThis('molecule'),hideThis('visualisation'),showThis('gldiv'),test()">
+            Visualiser
+          </button>
+        </div>
+      </section>
+
       <section id="download-pdb" class="download-pdb">
-      <h1>Télécharger</h1>
-      <h2>
-        Vous pouvez télecharger le PDB
-      </h2>
-      <div class="component">
-        <ul class="align">
-          <li>
-            <figure class="book">
-              <!-- Front -->
+        <h1>Télécharger</h1>
+        <h2>
+          Vous pouvez télecharger le PDB
+        </h2>
+        <div class="component">
+          <ul class="align">
+            <li>
+              <figure class="book">
+                <!-- Front -->
 
-              <ul class="hardcover_front">
-                <li>
-                  <div class="coverDesign blue">
-                    <h1>PDB</h1>
-                    <p>BOOK</p>
-                  </div>
-                </li>
-                <li></li>
-              </ul>
+                <ul class="hardcover_front">
+                  <li>
+                    <div class="coverDesign blue">
+                      <h1>PDB</h1>
+                      <p>BOOK</p>
+                    </div>
+                  </li>
+                  <li></li>
+                </ul>
 
-              <!-- Pages -->
+                <!-- Pages -->
 
-              <ul class="page">
-                <li></li>
-                <li>
-                  <a class="btn" href="#">Download</a>
-                </li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+                <ul class="page">
+                  <li></li>
+                  <li>
+                    <a class="btn" href="#">Download</a>
+                  </li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
 
-              <!-- Back -->
+                <!-- Back -->
 
-              <ul class="hardcover_back">
-                <li></li>
-                <li></li>
-              </ul>
-              <ul class="book_spine">
-                <li></li>
-                <li></li>
-              </ul>
-            </figure>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </body>
-  </section>
-</section>
-  <section class="visualisation" id="visualisation">
-    <div class="container-text">
-      <h2>Visualisation</h2>
-    </div>
-   
-  </section>
-  <div class="container-load" name="molecule" id="molecule"></div>
-  <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
-
-  <div id="container-mol">
-    <div id="container-01" class="mol-container"></div>
+                <ul class="hardcover_back">
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="book_spine">
+                  <li></li>
+                  <li></li>
+                </ul>
+              </figure>
+            </li>
+          </ul>
+        </div>
   </div>
-  <link rel="stylesheet" href="livre.css" />
-  <link rel="stylesheet" href="stylesheet.css" />
-  <link rel="stylesheet" href="visualisation.css" />
+</body>
+</section>
+</section>
+<section class="visualisation" id="visualisation">
+  <div class="gldiv" id="gldiv">
+    <h2>Visualisation</h2>
+
+    
+  </div>
+
+</section>
+<div class="container-load" name="molecule" id="molecule"></div>
+<script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+
+
+
+<div id="container-mol">
+  <div id="change-butt">
+    <input type="button" value="Stick" onclick="glviewer.setStyle({},{stick:{}}); glviewer.render();">
+    <input type="button" value="Line" onclick="glviewer.setStyle({},{line:{}}); glviewer.render();">
+    <input type="button" value="Cross" onclick="glviewer.setStyle({},{cross:{linewidth:2}}); glviewer.render();">
+    <input type="button" value="Sphere" onclick="glviewer.setStyle({},{sphere:{}}); glviewer.render();">
+    <input type="button" value="Cartoon" onclick="glviewer.setStyle({hetflag:false},{cartoon:{}}); glviewer.render();">
+    
+  </div>
+  <div id="container-01" class="mol-container"></div>
+  
+</div>
+<link rel="stylesheet" href="livre.css" />
+<link rel="stylesheet" href="stylesheet.css" />
+<link rel="stylesheet" href="visualisation.css" />
+
 </html>

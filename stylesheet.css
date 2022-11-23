@@ -72,3 +72,8 @@ body {
   a.navbar-brand {
     color: #c1121f
   }
+
+  .container-01 {
+    width: 30%;
+    height: 30%;
+  }

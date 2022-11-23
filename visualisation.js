@@ -1,42 +1,49 @@
-function display3D(protein) {
+var glviewer = null;
 
-  let element = $('#container-01');
-  let config = { backgroundColor: ' #fdf0d5' };
-  let viewer = $3Dmol.createViewer(element, config);
-  let pdbUri = protein.get_pdb();
-  
-  jQuery.ajax(pdbUri, {
-    success: function (data) {
-      let v = viewer;
-      v.addModel(data, "pdb");                       /* load data */
-      v.setStyle({}, { stick: { color: 'spectrum' } });  /* style all atoms */
-      v.zoomTo();                                      /* set camera */
-      v.render();                                      /* render scene */
-      v.zoom(1.2, 1000);
-      console.log('vvvv', v);
-      return v;
-    },
-    error: function (hdr, status, err) {
-      console.error("Failed to load PDB " + pdbUri + ": " + err);
-    },
+async function display3D(protein) {
+	console.log("start display");
+	let element = document.getElementById('container-01');
+	let pdbUri = protein
 
-  }
+	glviewer = $3Dmol.createViewer($(element), { defaultcolors: $3Dmol.elementColors.rasmol, backgroundColor: 'black' });
+	
+	if (pdbUri.startsWith('pdb:')) {
+		glviewer = $3Dmol.download(pdbUri, glviewer, { doAssembly: true, noSecondaryStructure: false }, function () {
+			glviewer.setStyle({}, { cartoon: { color: 'spectrum' } });
+			glviewer.render();
+		});
+	} else {
+		jQuery.ajax(pdbUri, {
+			success: function (data) {
 
-  )
-return v;
-
+				glviewer.addModel(data, "pdb");                       /* load data */
+				glviewer.setStyle({}, { cartoon: { color: 'spectrum' } });  /* style all atoms */
+				glviewer.zoomTo();                                      /* set camera */
+				glviewer.render();                                      /* render scene */
+			},
+			error: function (hdr, status, err) {
+				console.error("Failed to load PDB " + pdbUri + ": " + err);
+			},
+		})
+	}
 }
-function modify_viewer(viewer) {
 
-  viewer.setStyle({}, { cartoon: { colorscheme: 'yellowCarbon' }, line: { colorscheme: 'yellowCarbon' } });
-  viewer.render()
-}
+
+
+
+
+
+
+
+
+
+
 
 function visualisation(molecule) {
-  console.log(molecule);
-  let test =
-    document.querySelector("#molecule");
-  test.innerHTML = `
+	console.log(molecule);
+	let test =
+		document.querySelector("#molecule");
+	test.innerHTML = `
     <iframe id="inlineFrameExample"
     title="Visualisation proteine connus"
     src="https://3Dmol.org/viewer.html?pdb=${molecule}&style=cartoon:color~spectrum">
