@@ -43,8 +43,9 @@ body {
 
 #joli{
 
-    width: 35vw;
+    width: 30vw;
     height: 100vh;
+    zoom: 0.1;
 }
 
 /* navbar  */
@@ -79,6 +80,18 @@ body {
     height: 30%;
   }
   
-  #card_body {
-    color: #c1121f
+ .card{
+  background: #fdf0d5;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+  width: 20%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+  .btn-primary{
+    background-color:#669bbc;;
+    color: #003049;
+    padding: 14px 260px;
   }
