@@ -32,6 +32,7 @@ class Protein {
 
 
 function test(){
+    console.log("testestests");
     var file = document.getElementById('upload_pdb').files[0];
     var reader = new FileReader();
     reader.readAsDataURL(file);
