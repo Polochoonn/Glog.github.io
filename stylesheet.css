@@ -24,6 +24,20 @@ body {
 
 
 /* Pour l'image sur index */
+.text-index{
+    color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
+    position:absolute;
+    margin-top:5%;
+    margin-left:2%;
+
+}
+.text-index2{
+    color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
+    position:absolute;
+    margin-top:20%;
+    margin-left:60%;
+
+}
 
 #joli{
     width: 100vw;
