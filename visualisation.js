@@ -6,11 +6,9 @@ async function display3D(protein) {
 	let pdbUri = protein
 
 	glviewer = $3Dmol.createViewer($(element), { defaultcolors: $3Dmol.elementColors.rasmol, backgroundColor: 'black' });
-	
+
 	if (pdbUri.startsWith('pdb:')) {
-		glviewer = $3Dmol.download(pdbUri, glviewer, { doAssembly: true, noSecondaryStructure: false }, function () {
-			glviewer.setStyle({}, { cartoon: { color: 'spectrum' } });
-			glviewer.render();
+		glviewer,v = $3Dmol.download(pdbUri, glviewer, { doAssembly: true, noSecondaryStructure: false }, function () {	
 		});
 	} else {
 		jQuery.ajax(pdbUri, {
