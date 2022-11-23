@@ -25,16 +25,45 @@ class Protein {
  
 
 
-function uploadPDB(){
-    var pdb_file = document.getElementById("upload_pdb").files[0].name;
-    alert(pdb_file);
-    return pdb_file
+  
+
+
+
+
+
+function test(){
+    var file = document.getElementById('upload_pdb').files[0];
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+        pdb_protein = initialize_4qwo(reader.result);
+        display3D(pdb_protein);  
+    }
+
+// la faire pour voir le fichier pdb
+//     if (file) {
+//        
+
+//         reader.onload = function (evt) {
+//             // console.log("/4qw0.pdb".valueOf())
+//             file = evt.target.result
+//             console.log(file);
+//             // b=initialize_4qwo(file);
+//         };
+
+//         reader.onerror = function (evt) {
+//             console.error("An error ocurred reading the file",evt);
+//         };
+
+//         reader.readAsText(file, "UTF-8");
+
+     
+//     }
 }
 
-function uploadFasta(){
-    var fasta_file = document.getElementById("upload_fasta").value;
-    return fasta
-}
+
+
+// alert(pdb_file);
 
 
 function initialize_4qwo(a){
@@ -43,4 +72,4 @@ function initialize_4qwo(a){
     protein_4qw0.set_fasta("./rcsb_pdb_4QWO.fasta");
     console.log(protein_4qw0);
     return protein_4qw0;
-    }
+}

@@ -1,9 +1,9 @@
     function display3D(protein) {
 
         let element = $('#container-01');
-        let config = { backgroundColor: ' #f0e8db' };
+        let config = { backgroundColor: ' #fdf0d5' };
         let viewer = $3Dmol.createViewer( element, config );
-      let pdbUri = protein.get_pdb();
+        let pdbUri = protein.get_pdb();
       console.log("displau",pdbUri);
       jQuery.ajax( pdbUri, { 
         success: function(data) {
