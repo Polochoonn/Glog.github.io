@@ -8,7 +8,7 @@ async function display3D(protein) {
 	glviewer = $3Dmol.createViewer($(element), { defaultcolors: $3Dmol.elementColors.rasmol, backgroundColor: 'black' });
 
 	if (pdbUri.startsWith('pdb:')) {
-		glviewer,v = $3Dmol.download(pdbUri, glviewer, { doAssembly: true, noSecondaryStructure: false }, function () {	
+		glviewer, v = $3Dmol.download(pdbUri, glviewer, { doAssembly: true, noSecondaryStructure: false }, function () {
 		});
 	} else {
 		jQuery.ajax(pdbUri, {
@@ -26,6 +26,11 @@ async function display3D(protein) {
 	}
 }
 
+function download_png() {
+	download = document.getElementById("download_img");
+	var image = document.querySelector("canvas").toDataURL("image/png").replace("image/png", "image/octet-stream");
+	download.setAttribute("href", image);
+}
 
 
 
