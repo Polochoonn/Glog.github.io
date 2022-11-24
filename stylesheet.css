@@ -1,87 +1,143 @@
 /* Mise en forme générale */
-h1 { color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 2.2vw; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
-a { color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; }
+h1 {
+  color: #c1121f;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2.2vw;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
+a {
+  color: #c1121f;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
 
 
-h2 { color: #c1121f; font-family: 'Open Sans', sans-serif; font-size: 1.5vw; font-weight: 300; line-height: 32px; margin: 0 0 20px; text-align: center; }
-h5 { color: #c1121f; font-family: 'Open Sans', sans-serif; font-size: 1.5vw; font-weight: 300; line-height: 32px; margin: 0 0 20px; text-align: center; }
+h2 {
+  color: #c1121f;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5vw;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+h5 {
+  color: #c1121f;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5vw;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 20px;
+  text-align: center;
+}
 
 
-p { color: #003049; font-family: 'Helvetica Neue', sans-serif; font-size: 1vw; line-height: 24px; margin: 0 0 0; text-align: justify; text-justify: inter-word; }
+p {
+  color: #003049;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1vw;
+  line-height: 24px;
+  margin: 0 0 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 body {
-    width: 100%;
-    margin: auto; /* Pour centrer notre page */
-    margin-top: 0%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
-    margin-bottom: 0%;    /* aussi pour le bas du navigateur */
-    background-color:  #fdf0d5; /* Un fond pour éviter d'avoir un fond blanc  */
-    padding: 0%;
-   
+  width: 100%;
+  margin: auto;
+  /* Pour centrer notre page */
+  margin-top: 0%;
+  /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
+  margin-bottom: 0%;
+  /* aussi pour le bas du navigateur */
+  background-color: #fdf0d5;
+  /* Un fond pour éviter d'avoir un fond blanc  */
+  padding: 0%;
 
-    color:  #c1121e;
-    }
- h3 {
-        text-shadow: 2px 4px 3px rgba(192, 96, 102, 0.505);
-    }
+
+  color: #c1121e;
+}
+
+h3 {
+  text-shadow: 2px 4px 3px rgba(192, 96, 102, 0.505);
+}
 
 
 /* Pour l'image sur index */
 
-.text-index{
-    color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
-    position:absolute;
-    margin-top:5%;
-    margin-left:2%;
-
-}
-.text-index2{
-    color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
-    position:absolute;
-    margin-top:20%;
-    margin-left:60%;
+.text-index {
+  color: #c1121f;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  letter-spacing: -1px;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 2%;
 
 }
 
-#joli{
+.text-index2 {
+  color: #c1121f;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  letter-spacing: -1px;
+  position: absolute;
+  margin-top: 20%;
+  margin-left: 60%;
 
-    width: 30vw;
-    height: 100vh;
-    zoom: 0.1;
+}
+
+#joli {
+
+  width: 30vw;
+  height: 100vh;
+  zoom: 0.1;
 }
 
 /* navbar  */
 
 
 #neubar {
-    background: #669bbc;
-    box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
-  }
-   
-  .nav-item .active {
-    border-radius: 6px;
-    background: linear-gradient(145deg, #a9def9, #a9def9);
-    box-shadow:  4px 4px 8px #a9def9,
-                 -4px -4px 8px #003049;
-  }
-  #neubar .nav-item {
-    margin : auto 4px;
-  }
-  #neubar a {
-    padding-left:12px;
-    padding-right:12px;
-  }
-  
+  background: #669bbc;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4)
+}
 
-  a.navbar-brand {
-    color: #c1121f
-  }
+.nav-item .active {
+  border-radius: 6px;
+  background: linear-gradient(145deg, #a9def9, #a9def9);
+  box-shadow: 4px 4px 8px #a9def9,
+    -4px -4px 8px #003049;
+}
 
-  .container-01 {
-    width: 30%;
-    height: 30%;
-  }
-  
- .card{
+#neubar .nav-item {
+  margin: auto 4px;
+}
+
+#neubar a {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+
+a.navbar-brand {
+  color: #c1121f
+}
+
+.container-01 {
+  width: 30%;
+  height: 30%;
+}
+
+.card {
   background: #fdf0d5;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 black;
@@ -90,9 +146,18 @@ body {
   margin-right: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #669bbc;
+  ;
+  color: #003049;
+  padding: auto;
+
+  @media all and (max-width:60em) {
+    .btn-primary {
+      display: block;
+      margin: 0.5em auto;
+    }
   }
-  .btn-primary{
-    background-color:#669bbc;;
-    color: #003049;
-    padding: 14px 260px;
-  }
+}
