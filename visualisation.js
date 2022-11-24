@@ -153,14 +153,7 @@ function visualisation_nous(){
       <br>
       <input type="button" value="Recenter" onclick="glviewer.zoomTo();">
       <br>
-      <input id="pdbid" value="1UBQ" size="4">
-      <button onclick="glviewer.clear(); m = $3Dmol.download('pdb:' + $('#pdbid').val(), glviewer, {doAssembly:true, noSecondaryStructure: false});">Download</button>
-      <br>
       <a id="download_img" download="image.png"><button type="button" onClick="download_png()">Télécharger PNG</button></a>
-
-   
-  
-  
 
   `
 }
