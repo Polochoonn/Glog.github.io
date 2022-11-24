@@ -16,25 +16,27 @@
 
   .container-load{
     padding:0px;
-    width: 900px;
+    width: 60vw;
     height:80vh;
     margin-left:0%;
     
 
   }
   
-  
+.container-2-visualisation{
+  padding: 2%;
+}
 .mol-container {
           position: relative;
-          width: 100vw;
-          padding: 1%;
+          width: 80vw;
+          padding: 0%;
           height: 80vh;
-          margin-top: 2%;
+          margin: 0%;
         }
 #container-visualisation{
     /* background-color: orange; */
     
-    width: 100vw;
+    width: 90vw;
     display: flex;
     justify-content: space-evenly; 
     padding: 1% 0% 0 0;
@@ -118,7 +120,7 @@
   #inlineFrameExample{
     
     padding:1%;
-    width: 100vw;
+    width: 80vw;
     height: 90vh;
   }
   

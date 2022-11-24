@@ -7,7 +7,7 @@
     <script type="text/javascript" src="usefull_function.js"></script>
   </head>
 
-  <body>
+  <body id="principal">
     <div id="header"></div>
 
     <div class="container-vcarre-v">
@@ -81,75 +81,73 @@
             </button>
           </div>
         </section>
-     
-      <section id="download-pdb" class="download-pdb">
-      <h1>Télécharger</h1>
-      <h2>
-        Vous pouvez télecharger le PDB
-      </h2>
-      <div class="component">
-        <ul class="align">
-          <li>
-            <figure class="book">
-              <!-- Front -->
 
-              <ul class="hardcover_front">
-                <li>
-                  <div class="coverDesign blue">
-                    <h1>PDB</h1>
-                    <p>BOOK</p>
-                  </div>
-                </li>
-                <li></li>
-              </ul>
+        <section id="download-pdb" class="download-pdb">
+          <h1>Télécharger</h1>
+          <h2>Vous pouvez télecharger le PDB</h2>
+          <div class="component">
+            <ul class="align">
+              <li>
+                <figure class="book">
+                  <!-- Front -->
 
-              <!-- Pages -->
+                  <ul class="hardcover_front">
+                    <li>
+                      <div class="coverDesign blue">
+                        <h1>PDB</h1>
+                        <p>BOOK</p>
+                      </div>
+                    </li>
+                    <li></li>
+                  </ul>
 
-              <ul class="page">
-                <li></li>
-                <li>
-                  <a class="btn" href="#">Download</a>
-                </li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+                  <!-- Pages -->
 
-              <!-- Back -->
+                  <ul class="page">
+                    <li></li>
+                    <li>
+                      <a class="btn" href="#">Download</a>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
 
-              <ul class="hardcover_back">
-                <li></li>
-                <li></li>
-              </ul>
-              <ul class="book_spine">
-                <li></li>
-                <li></li>
-              </ul>
-            </figure>
-          </li>
-        </ul>
+                  <!-- Back -->
+
+                  <ul class="hardcover_back">
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <ul class="book_spine">
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <section class="visualisation" id="visualisation">
+      <div class="container-text">
+        <h2>Visualisation</h2>
       </div>
-    </div>
+    </section>
+
+    <section class="container-2-visualisation">
+      <div class="container-load" name="molecule" id="molecule"></div>
+
+      <div id="container-mol">
+        <div name="molecule2" id="molecule2"></div>
+      </div>
+      <div id="container-01" class="mol-container"></div>
+    </section>
   </body>
-  </section>
-</section>
-
-  <section class="visualisation" id="visualisation">
-    <div class="container-text">
-      <h2>Visualisation</h2>
-    </div>
-   
-  </section>
-  
-
-  <div class="container-load" name="molecule" id="molecule"></div>
-  
-  <div id="container-mol">
-  <div name="molecule2" id="molecule2">
-  </div>
-  <div id="container-01" class="mol-container"></div>
   <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
- 
+
   <link rel="stylesheet" href="livre.css" />
   <link rel="stylesheet" href="stylesheet.css" />
   <link rel="stylesheet" href="visualisation.css" />
