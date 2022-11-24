@@ -36,7 +36,7 @@
 #container-visualisation{
     /* background-color: orange; */
     
-    width: 90vw;
+    width: 100vw;
     display: flex;
     justify-content: space-evenly; 
     padding: 1% 0% 0 0;

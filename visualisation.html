@@ -5,6 +5,7 @@
     <script type="text/javascript" src="visualisation.js"></script>
     <script type="text/javascript" src="initialize_prot.js"></script>
     <script type="text/javascript" src="usefull_function.js"></script>
+    <script type="text/javascript" src="3Dmol.js"></script>
   </head>
 
   <body id="principal">
@@ -31,26 +32,26 @@
           </h2>
           <div class="liste-molecule">
             <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('4QWO')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),hideThis('visualisation'),showThis('molecule'),visualisation('4QWO')"
               class="buttonbox"
               type="button"
               value="4QWO"
             />
             <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('1CL4')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),hideThis('visualisation'),showThis('molecule'),visualisation('1CL4')"
               class="buttonbox"
               type="button"
               value="1CL4"
             />
             <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('5LMY')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),hideThis('visualisation'),showThis('molecule'),visualisation('5LMY')"
               class="buttonbox"
               type="button"
               value="5LMY"
             />
 
             <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('2F76')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),hideThis('visualisation'),showThis('molecule'),visualisation('2F76')"
               class="buttonbox"
               type="button"
               value="2F76"
@@ -75,7 +76,7 @@
             <br />
             <button
               class="upload-btn"
-              onclick="uploadFiles(),hideThis('molecule'),hideThis('visualisation'),showThis('molecule2'),visualisation_nous(),test()"
+              onclick="uploadFiles(),hideThis('molecule'),hideThis('visualisation'),showThis('molecule2'),showThis('container-01'),visualisation_nous(),test()"
             >
               Visualiser
             </button>
@@ -140,13 +141,11 @@
     <section class="container-2-visualisation">
       <div class="container-load" name="molecule" id="molecule"></div>
 
-      <div id="container-mol">
-        <div name="molecule2" id="molecule2"></div>
-      </div>
+      <div name="molecule2" id="molecule2"></div>
+
       <div id="container-01" class="mol-container"></div>
     </section>
   </body>
-  <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
 
   <link rel="stylesheet" href="livre.css" />
   <link rel="stylesheet" href="stylesheet.css" />
