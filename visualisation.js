@@ -1,24 +1,41 @@
-    function display3D(protein) {
+var glviewer = null;
 
-        let element = $('#container-01');
-        let config = { backgroundColor: ' #fdf0d5' };
-        let viewer = $3Dmol.createViewer( element, config );
-        let pdbUri = protein.get_pdb();
-      console.log("displau",pdbUri);
-      jQuery.ajax( pdbUri, { 
-        success: function(data) {
-          let v = viewer;
-          v.addModel( data, "pdb" );                       /* load data */
-          v.setStyle({}, {cartoon: {color: 'spectrum'}});  /* style all atoms */
-          v.zoomTo();                                      /* set camera */
-          v.render();                                      /* render scene */
-          v.zoom(1.2, 1000);                               /* slight zoom */
-        },
-        error: function(hdr, status, err) {
-          console.error( "Failed to load PDB " + pdbUri + ": " + err );
-        },
-    })
+async function display3D(protein) {
+	console.log("start display");
+	let element = document.getElementById('container-01');
+	let pdbUri = protein
+
+	glviewer = $3Dmol.createViewer($(element), { backgroundColor: '0xffffff' }); //defaultcolors: $3Dmol.elementColors.rasmol, 
+
+	if (pdbUri.startsWith('pdb:')) {
+		glviewer, v = $3Dmol.download(pdbUri, glviewer, { doAssembly: true, noSecondaryStructure: false }, function () {
+		});
+	} else {
+		jQuery.ajax(pdbUri, {
+			success: function (data) {
+				
+				glviewer.addModel(data, "pdb");                       /* load data */
+				glviewer.setStyle({}, { cartoon: { color: 'spectrum' } });  /* style all atoms */
+				glviewer.zoomTo();                                      /* set camera */
+				glviewer.render();                                      /* render scene */
+			},
+			error: function (hdr, status, err) {
+				console.error("Failed to load PDB " + pdbUri + ": " + err);
+			},
+		})
+	}
 }
+
+
+
+
+
+function download_png() {
+	download = document.getElementById("download_img");
+	var image = document.querySelector("canvas").toDataURL("image/png").replace("image/png", "image/octet-stream");
+	download.setAttribute("href", image);
+}
+
 
 
 function visualisation(molecule){
