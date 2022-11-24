@@ -5,7 +5,7 @@ async function display3D(protein) {
 	let element = document.getElementById('container-01');
 	let pdbUri = protein
 
-	glviewer = $3Dmol.createViewer($(element), { defaultcolors: $3Dmol.elementColors.rasmol, backgroundColor: 'black' });
+	glviewer = $3Dmol.createViewer($(element), { backgroundColor: '0xffffff' }); //defaultcolors: $3Dmol.elementColors.rasmol, 
 
 	if (pdbUri.startsWith('pdb:')) {
 		glviewer, v = $3Dmol.download(pdbUri, glviewer, { doAssembly: true, noSecondaryStructure: false }, function () {
@@ -15,7 +15,7 @@ async function display3D(protein) {
 			success: function (data) {
 				
 				glviewer.addModel(data, "pdb");                       /* load data */
-				glviewer.setStyle({}, { cartoon: { color: 'spectrum' } });  /* style all atoms */
+				glviewer.setStyle({}, { cartoon: { color: 'black' } });  /* style all atoms */
 				glviewer.zoomTo();                                      /* set camera */
 				glviewer.render();                                      /* render scene */
 			},
