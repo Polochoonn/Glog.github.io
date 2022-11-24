@@ -1,19 +1,28 @@
 TODO : 
 
-Oceane : 
-- Affichage des molécules préexistante avec lien de redirection
-- Enregistrement des fichiers dans la class Protein
-- (Afficher dans 3Dmol)
+
+
+Class Protein --> ajouter fasta quand on l'aura (dans page prediction import fasta et le relier avec soluce)
+css bouton 
+livre download --> l'utiliser dans autre chose 
+page presentation du site avec les 2 parties (visu et prediction)
+refaire un peu le modele 3D du virus du site 
+drag and drop refaire le css
+peut etre bouton close pour fermer les visus en cours 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Benjamin & Louis :
 - Prédiction proteine (ALPHAFOLD ou AUTRE)
-
-Paul & Romane : 
-- Visualisation (bouton changement)
-- Css
-- Bouton 
-- Exporter les images 
-
-Autre : 
-- Lien entre prédiction et visualisation
-- Création d'autres pages
