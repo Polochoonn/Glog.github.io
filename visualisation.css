@@ -1,7 +1,14 @@
 
 /* Page Visualisation.html */
 
+.principal{
+  display:flex;
+  justify-content: center;
+  align-items: center;
 
+
+
+}
 .container-vcarre-v{
     /* background-color: lightblue; */
     padding: 0px;
@@ -26,6 +33,8 @@
 .container-2-visualisation{
   padding: 2%;
 }
+
+
 .mol-container {
           position: relative;
           width: 80vw;
@@ -37,6 +46,7 @@
     /* background-color: orange; */
     
     width: 100vw;
+    height:50vh;
     display: flex;
     justify-content: space-evenly; 
     padding: 1% 0% 0 0;
@@ -50,6 +60,9 @@
     padding: 1%;
   }
 
+  #mol_name{
+    width: 100%;
+  }
 
   /* CSS */
 .buttonbox {
@@ -240,7 +253,7 @@
 .visualisation {
  
   width:100vw;
-  height:100vh;
+  height:10vh;
 }
 
 .visualisation h2 {
@@ -249,8 +262,11 @@
 }
 .container-text{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-left:20vw;
-  width: 60vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15%;
+  width:70vw;
   height: 50vh;
 }
 
