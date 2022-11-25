@@ -177,7 +177,7 @@ function close_button(){
   document.querySelector("#close_button-id");
   test.innerHTML = `
   <div class="container-close">
-    <div id ="test-button" onclick="hideThis('container-01'),hideThis('molecule2'),hideThis('inlineFrameExample'), hideThis('test-button')" class="btn-c btn3"></div>
+    <div id ="test-button" onclick="hideThis('test-button'),hideThis('container-01'),hideThis('molecule2'),hideThis('inlineFrameExample')" class="btn-c btn3"></div>
    </div>
 
 `
