@@ -91,7 +91,7 @@ width:20vw;
   }
 
   /* CSS */
-.buttonbox {
+.buttonbox ,input::file-selector-button{
     appearance: button;
     background-color: #669bbc;
     border: solid transparent;
@@ -234,6 +234,29 @@ width:20vw;
 
     
 /* Pour les drop and drang  */
+input::file-selector-button {
+  font-weight: bold;
+  width: 6.8vw;
+  background:  #c1121e68;
+  font-size: 0.4vw;
+}
+
+
+input[type='file']{ 
+  font-size: 0.8vw; 
+}
+
+
+
+
+.upload-container p{
+  color:#288d4d;
+}
+
+
+
+
+
 .upload-container {
   position: relative;
   display:flex;
