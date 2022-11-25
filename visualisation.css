@@ -37,7 +37,10 @@
   justify-content: center;
   padding: 2%;
 }
-
+.visualisation_nous h1{
+  size: 30px;
+  color: green;
+}
 #molecule2{
 
 width:20vw;

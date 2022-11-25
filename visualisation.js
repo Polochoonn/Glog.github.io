@@ -147,7 +147,7 @@ function visualisation_nous(){
   let test=
     document.querySelector("#molecule2");
     test.innerHTML = `
-      <h2>Outils</h2>
+      <h1>Outils</h1>
       <input type="button" value="Stick" onclick="glviewer.setStyle({},{stick:{}}); glviewer.render();">
       <input type="button" value="Line" onclick="glviewer.setStyle({},{line:{}}); glviewer.render();">
       <input type="button" value="Cross" onclick="glviewer.setStyle({},{cross:{linewidth:2}}); glviewer.render();">
