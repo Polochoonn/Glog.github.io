@@ -29,7 +29,14 @@ var colorSS = function(viewer) {
     if(atom.ss == 'h') return "magenta";
     else if(atom.ss == 's') return "orange";
     else return "white";
-  });
+    
+  }); viewer.render();
+}
+
+var colorSpectrum = function(viewer) {
+  //color by secondary structure
+  var m = viewer.getModel();
+  m.setStyle({}, { cartoon: { color: 'spectrum' } });
   viewer.render();
 }
 
@@ -91,6 +98,8 @@ async function display3D(protein) {
 
 	if (pdbUri.startsWith('pdb:')) {
 		glviewer, v = $3Dmol.download(pdbUri, glviewer, { doAssembly: true, noSecondaryStructure: false }, function () {
+      glviewer.setStyle({}, { cartoon: { color: 'spectrum' } });
+      glviewer.render(); 
 		});
 	} else {
 		jQuery.ajax(pdbUri, {
@@ -143,9 +152,11 @@ function visualisation_nous(){
       <input type="button" value="Line" onclick="glviewer.setStyle({},{line:{}}); glviewer.render();">
       <input type="button" value="Cross" onclick="glviewer.setStyle({},{cross:{linewidth:2}}); glviewer.render();">
       <input type="button" value="Sphere" onclick="glviewer.setStyle({},{sphere:{}}); glviewer.render();">
-      <input type="button" value="Cartoon" onclick="glviewer.setStyle({hetflag:false},{cartoon:{}}); glviewer.render();">
+      <input type="button" value="Cartoon" onclick="glviewer.setStyle({},{cartoon:{}}); glviewer.render();">
       <input type="button" value="Label alpha C's" onclick="addLabels(glviewer); glviewer.render();">
       <input type="button" value="Color SS" onclick="colorSS(glviewer);">
+      <input type="button" value="Color Spectrum" onclick="colorSpectrum(glviewer);">
+
       <br>
       <input type="button" value="Surface1" onclick="surf1 = glviewer.addSurface($3Dmol.SurfaceType.VDW, {}, {hetflag:false,chain:'A'},{hetflag:false,chain:'A'});">
       <input type="button" value="Surface2" onclick="surf2 = glviewer.addSurface($3Dmol.SurfaceType.MS, {map:{prop:'partialCharge',scheme:new $3Dmol.Gradient.RWB(-.6,.6)}, opacity:0.85}, {chain:'B'},{chain:'B'});">

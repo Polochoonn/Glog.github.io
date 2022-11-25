@@ -10,7 +10,7 @@ refaire un peu le modele 3D du virus du site
 drag and drop refaire le css
 peut etre bouton close pour fermer les visus en cours 
 
-
+voir si rajouter des fonctions a 3D moljs
 
 
 
