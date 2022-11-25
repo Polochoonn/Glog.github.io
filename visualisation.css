@@ -37,14 +37,16 @@
   justify-content: center;
   padding: 2%;
 }
-.visualisation_nous h1{
-  size: 30px;
-  color: green;
-}
-#molecule2{
 
+#molecule2{
 width:20vw;
 }
+
+#molecule2 h1{
+  color: #c1121f;
+  }
+
+
 .mol-container {
           position: relative;
           width: 80vw;
