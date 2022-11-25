@@ -19,7 +19,7 @@
           <div class="searchbox">
             <input type="search" id="mol_name" placeholder="Exemple 1UBQ" />
             <button
-              onclick="hideThis('molecule'),hideThis('visualisation'),showThis('molecule2'),showThis('container-01'),display3D('pdb:'+get_name('mol_name')),visualisation_nous()"
+              onclick="hideThis('molecule'),showThis('molecule2'),showThis('container-01'),display3D('pdb:'+get_name('mol_name')),visualisation_nous()"
               id="search_button"
               onclick="visualisation(get_name('mol_name'))"
             ></button>
@@ -32,26 +32,26 @@
           </h2>
           <div class="liste-molecule">
             <input
-              onclick="hideThis('molecule2'),hideThis('container-01'),hideThis('visualisation'),showThis('molecule'),visualisation('4QWO')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('4QWO')"
               class="buttonbox"
               type="button"
               value="4QWO"
             />
             <input
-              onclick="hideThis('molecule2'),hideThis('container-01'),hideThis('visualisation'),showThis('molecule'),visualisation('1CL4')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('1CL4')"
               class="buttonbox"
               type="button"
               value="1CL4"
             />
             <input
-              onclick="hideThis('molecule2'),hideThis('container-01'),hideThis('visualisation'),showThis('molecule'),visualisation('5LMY')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('5LMY')"
               class="buttonbox"
               type="button"
               value="5LMY"
             />
 
             <input
-              onclick="hideThis('molecule2'),hideThis('container-01'),hideThis('visualisation'),showThis('molecule'),visualisation('2F76')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('2F76')"
               class="buttonbox"
               type="button"
               value="2F76"
@@ -76,7 +76,7 @@
             <br />
             <button
               class="upload-btn"
-              onclick="uploadFiles(),hideThis('molecule'),hideThis('visualisation'),showThis('molecule2'),showThis('container-01'),visualisation_nous(),test()"
+              onclick="uploadFiles(),hideThis('molecule'),showThis('molecule2'),showThis('container-01'),visualisation_nous(),test()"
             >
               Visualiser
             </button>
@@ -131,10 +131,6 @@
         </section>
       </section>
     </div>
-
-      <div class="container-text" id="visualisation">
-        <h2 >Visualisation</h2>
-      </div>
 
     <section class="container-2-visualisation">
       <div class="container-load" name="molecule" id="molecule"></div>
