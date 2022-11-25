@@ -5,6 +5,8 @@ function hideThis(id){
   var obj = document.getElementById(id);
   obj.style.display = "none";
   }
+
+  
 function showThis(id)
   {
   var obj = document.getElementById(id);

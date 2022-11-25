@@ -75,7 +75,12 @@ width:20vw;
     height: 100%;
   }
   
-  
+.container-couleur-close{
+  height: 80vh;
+}
+
+
+
   #recherche,#molecule-connus,#import-pdb,#download-pdb{
     width: 100%;
     padding: 1%;
@@ -276,3 +281,104 @@ width:20vw;
   color: #c1121e68;
 }
 
+
+/* CLose button */
+
+.container-close{
+  position: relative;
+
+}
+.btn-c{
+  height: 50px;
+  width: 50px;
+  margin: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn1{
+  background: #fac536;
+  position: relative;
+  overflow: hidden;
+}
+.btn1::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 10%;
+  opacity: 0;
+  background: #222;
+  transition: 300ms;
+}
+.btn1:hover::before{
+  opacity: 1;
+  top: 50%;
+}
+.btn2{
+  background: #39ea49;
+  position: relative;
+  overflow: hidden;
+}
+.btn2::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 45%;
+  opacity: 0;
+  background: #222;
+  transition: 300ms;
+}
+.btn2::after{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 15%;
+  height: 80%;
+  opacity: 0;
+  background: #39ea49;
+  transition: 300ms;
+}
+.btn2:hover::before, .btn2:hover::after{
+  opacity: 1;
+  top: 50%;
+}
+.btn3{
+  background: #f25056;
+  position: relative;
+  overflow: hidden;
+}
+.btn3::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 15%;
+  height: 50%;
+  opacity: 0;
+  background: #222;
+  transition: 300ms;
+}
+.btn3::after{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 15%;
+  opacity: 0;
+  height: 50%;
+  background: #222;
+  transition: 300ms;
+}
+.btn3:hover::before, .btn3:hover::after{
+  opacity: 1;
+  top: 50%;
+}
