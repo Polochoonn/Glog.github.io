@@ -63,23 +63,32 @@
           <h2>
             Vous pouvez importer un fichier PDB pour pouvoir le visualiser
           </h2>
+          
+     
+          
+          
           <div class="border-drag">
             <div class="upload-container">
               <input
+                class="box-file"
                 type="file"
                 id="upload_pdb"
-                type="file"
                 multiple="true"
                 accept=".pdb"
               />
-            </div>
+            </div> 
+            
             <br />
+            <div class="border-drag">
             <button
               class="upload-btn"
               onclick="uploadFiles(),hideThis('molecule'),showThis('molecule2'),showThis('container-01'),visualisation_nous(),test()"
             >
               Visualiser
             </button>
+            
+          </div>
+
           </div>
         </section>
 
