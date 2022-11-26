@@ -8,14 +8,87 @@
   <body class="container-principal">
     <div id="header"></div>
 
-    <div id="container-chargement" class="container-chargement">
+    <!-- <div id="container-chargement" class="container-chargement">
       <iframe
         id="prediction-iframe"
         title="Prediction proteine"
         src="http://www.sbg.bio.ic.ac.uk/~phyre2/html/page.cgi?id=index"
       >
       </iframe>
-    </div>
+    </div> -->
+    <div class="form-pred">
+
+
+      <form enctype="multipart/form-data" method="POST" action="http://www.sbg.bio.ic.ac.uk/phyre2/webscripts/phyre2_submit.cgi">
+
+       <br><table class="round" width="60%" bgcolor="#d1d2c0" cellspacing="1" cellpadding="3" border="0">
+       <tbody><tr>
+       <td class="topLeftRound" align="right" bgcolor="#737065">
+       <font color="white"> E-mail Address</font></td>
+       <td align="left">
+       <!-- index_form_start.html end -->
+       <!--                           -->
+       <input type="text" size="56" name="usr-email" aria-label="usr-email">
+       </td></tr>
+       <tr><td align="right" bgcolor="#737065">
+       <font color="white"> Optional Job description</font></td><td align="left">
+       <input type="text" size="56" name="seq-desc" aria-label="seq-desc">
+       </td></tr>
+       <tr>
+       <td align="right" bgcolor="#737065"><font color="white"> Amino Acid Sequence</font>
+       </td><td align="left">
+       <textarea name="sequence" aria-label="sequence" rows="10" cols="56"></textarea>
+       </td></tr>
+       <tr><td align="right" bgcolor="#737065">
+       &nbsp;</td><td align="left">
+       <!--                                   -->
+       <!-- index_bottomhalf_commercial begin -->
+       
+       <tr>
+       <td bgcolor="#737065" align="right"><font color="white">Modelling Mode 
+       
+       <td align="left">
+       <label for="normal">Normal</label><input type="radio" name="modelmode" id="normal" value="normal" checked="" aria-label="normal"> 
+       <label for="intensive">Intensive</label><input type="radio" name="modelmode" value="intensive" id="intensive" aria-label="intensive">       
+       </td>
+       </tr>
+
+       <td class="bottomLeftRound" align="center" bgcolor="#737065">&nbsp;
+       </td>
+       <td align="left">
+       <input type="submit" size="4" value="Phyre Search" name="btnS">
+       <input type="reset" size="4" value="Reset">
+       </td>
+       </tr>
+       
+       
+       
+      
+       </form>
+       </td></tr>
+       </tbody></table>
+       
+       
+       
+       
+       <!-- index_bottomhalf_commercial end -->
+       <!--                                 -->
+       <p><font size="-2"> Phyre2 5175087 submissions since Feb 14 2011</font></p>
+       <!--                    -->
+       
+
+
+   </div>
+ </div>
+
+
+
+
+
+
+
+
+
   </body>
 
   <link rel="stylesheet" href="stylesheet.css" />
