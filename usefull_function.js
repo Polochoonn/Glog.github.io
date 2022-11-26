@@ -33,6 +33,7 @@ function RedirectionHome(){
     var files = document.getElementById('upload_pdb').files;
     if(files.length==0){
         alert("Please first choose or drop any file(s)...");
+        hideThis('container-molecule2-close');
         return;
     }
     var filenames="";

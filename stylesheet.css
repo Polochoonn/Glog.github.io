@@ -4,7 +4,10 @@ a { color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.3vw;
 
 
 h2 { color: #c1121f; font-family: 'Open Sans', sans-serif; font-size: 1.5vw; font-weight: 300; line-height: 32px; margin: 0 0 20px; text-align: center; }
+.border-drag h2{
+color: #c1121f; font-family: 'Open Sans', sans-serif; font-size: 1.5vw; font-weight: 300; line-height: 32px; 
 
+}
 
 p { color: #003049; font-family: 'Helvetica Neue', sans-serif; font-size: 1vw; line-height: 24px; margin: 0 0 0; text-align: justify; text-justify: inter-word; }
 

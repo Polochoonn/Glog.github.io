@@ -147,25 +147,44 @@ function visualisation_nous(){
     document.querySelector("#molecule2");
     test.innerHTML = `
       <div id="container-molecule2-close">
-      <h1>Outils</h1>
       <br>
+      <br>
+      <h1>Outils</h1>
+      <div class="border-drag">
+      <h2>Styles</h2>
+      <div class="border-drag">
+
       <input class="buttonbox" type="button" value="Stick" onclick="glviewer.setStyle({},{stick:{}}); glviewer.render();">
       <input class="buttonbox" type="button" value="Line" onclick="glviewer.setStyle({},{line:{}}); glviewer.render();">
       <input class="buttonbox" type="button" value="Cross" onclick="glviewer.setStyle({},{cross:{linewidth:2}}); glviewer.render();">
       <input class="buttonbox" type="button" value="Sphere" onclick="glviewer.setStyle({},{sphere:{}}); glviewer.render();">
       <input class="buttonbox" type="button" value="Cartoon" onclick="glviewer.setStyle({},{cartoon:{}}); glviewer.render();">
-      <input class="buttonbox" type="button" value="Label alpha C's" onclick="addLabels(glviewer); glviewer.render();">
-      <input class="buttonbox" type="button" value="Color SS" onclick="colorSS(glviewer);">
-      <input class="buttonbox" type="button" value="Color Spectrum" onclick="colorSpectrum(glviewer);">
+      </div>
+      <h2>Atomes & Couleurs</h2>
+      <div class="border-drag">
 
-      <br>
+      <input class="buttonbox" type="button" value="Label Cα" onclick="addLabels(glviewer); glviewer.render();">
+      <input class="buttonbox" type="button" value="SS" onclick="colorSS(glviewer);">
+      <input class="buttonbox" type="button" value="Spectrum" onclick="colorSpectrum(glviewer);">
+      </div>
+
+      <h2>Surfaces</h2>
+      <div class="border-drag">
+
       <input class="buttonbox" type="button" value="Surface1" onclick="surf1 = glviewer.addSurface($3Dmol.SurfaceType.VDW, {}, {hetflag:false,chain:'A'},{hetflag:false,chain:'A'});">
       <input class="buttonbox" type="button" value="Surface2" onclick="surf2 = glviewer.addSurface($3Dmol.SurfaceType.MS, {map:{prop:'partialCharge',scheme:new $3Dmol.Gradient.RWB(-.6,.6)}, opacity:0.85}, {chain:'B'},{chain:'B'});">
       <input class="buttonbox" type="button" value="RM Surfaces" onclick="glviewer.removeAllSurfaces();">
-      <br>
+      </div>
+
+      <h2>Plus</h2>
+      <div class="border-drag">
+
       <input class="buttonbox" type="button" value="Recenter" onclick="glviewer.zoomTo();">
-      <br>
-      <a class="buttonbox" id="download_img" download="image.png"><button type="button" onClick="download_png()">Télécharger PNG</button></a>
+      <a id="download_img" download="image.png">
+      <button class="buttonbox" type="button" onClick="download_png()">PNG</button></a>
+      </div>
+
+      </div>
       </div>
 
   `
