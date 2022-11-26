@@ -1,0 +1,21 @@
+#container-chargement{
+    padding-top:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#outdiv { 
+
+height: 700px; 
+overflow: hidden; 
+position: relative; 
+width: 915px; 
+} 
+
+#iniframe { 
+height: 950px; 
+left: -200px; 
+position: absolute; 
+top: -570px; 
+width: 1200px; 
+} 

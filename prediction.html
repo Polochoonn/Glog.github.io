@@ -7,35 +7,17 @@
 
   <body class="container-principal">
     <div id="header"></div>
-
     <div id="container-chargement" class="container-chargement">
-      <div id="import-fasta" class="import-fasta">
-        <h2>Importer un fichier Fasta</h2>
-
-        <div class="mb-3">
-          <label for="formFileMultiple" class="form-label"></label>
-          <input
-            id="upload_fasta"
-            class="form-control"
-            type="file"
-            multiple
-            accept=".fasta"
-          />
-        </div>
-
-        <div
-          id="drop_zone"
-          ondrop="dropHandler(event);"
-          ondragover="dragOverHandler(event);"
-        >
-          <p>
-            Drag one or more files to this <i>drop zone</i>. En cours de
-            déploiment!!
-          </p>
-        </div>
-      </div>
+      <div id="outdiv"><iframe src="http://www.sbg.bio.ic.ac.uk/~phyre2/html/page.cgi?id=index" scrolling="no"  id="iniframe"></iframe></div> 
+      <!-- <iframe
+        id="prediction-iframe"
+        title="Prediction proteine"
+        src="http://www.sbg.bio.ic.ac.uk/~phyre2/html/page.cgi?id=index"
+      >
+      </iframe> -->
     </div>
   </body>
 
   <link rel="stylesheet" href="stylesheet.css" />
+  <link rel="stylesheet" href="prediction.css" />
 </html>

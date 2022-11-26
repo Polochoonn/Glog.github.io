@@ -5,9 +5,10 @@
     <script type="text/javascript" src="visualisation.js"></script>
     <script type="text/javascript" src="initialize_prot.js"></script>
     <script type="text/javascript" src="usefull_function.js"></script>
+    <script type="text/javascript" src="3Dmol.js"></script>
   </head>
 
-  <body>
+  <body id="principal">
     <div id="header"></div>
 
     <div class="container-vcarre-v">
@@ -16,9 +17,9 @@
           <h1>Rechercher</h1>
           <h2>Vous pouvez rechercher une molécule par son identifiant PDB</h2>
           <div class="searchbox">
-            <input type="search" id="mol_name" placeholder="Exemple 1CL4" />
+            <input type="search" id="mol_name" placeholder="Exemple 1UBQ" />
             <button
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation(get_name('mol_name'))"
+              onclick="hideThis('molecule'),showThis('molecule2'),showThis('container-01'),showThis('close_button-id'),close_button(),display3D('pdb:'+get_name('mol_name')),visualisation_nous()"
               id="search_button"
               onclick="visualisation(get_name('mol_name'))"
             ></button>
@@ -31,26 +32,26 @@
           </h2>
           <div class="liste-molecule">
             <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('4QWO')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('4QWO'),showThis('close_button-id'),close_button()"
               class="buttonbox"
               type="button"
               value="4QWO"
             />
             <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('1CL4')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('1CL4'),showThis('close_button-id'),close_button()"
               class="buttonbox"
               type="button"
               value="1CL4"
             />
             <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('5LMY')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('5LMY'),showThis('close_button-id'),close_button()"
               class="buttonbox"
               type="button"
               value="5LMY"
             />
 
             <input
-              onclick="hideThis('container-mol'),hideThis('visualisation'),showThis('molecule'),visualisation('2F76')"
+              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('2F76'),showThis('close_button-id'),close_button()"
               class="buttonbox"
               type="button"
               value="2F76"
@@ -67,84 +68,81 @@
               <input
                 type="file"
                 id="upload_pdb"
-                type="file"
                 multiple="true"
                 accept=".pdb"
               />
             </div>
             <br />
-            <button
-              class="upload-btn"
-              onclick="uploadFiles(),hideThis('molecule'),hideThis('visualisation'),showThis('container-mol'),test()"
-            >
-              Visualiser
-            </button>
+            <div class="border-drag">
+              <button
+                class="buttonbox"
+                onclick="uploadFiles(),hideThis('molecule'),showThis('molecule2'),showThis('container-01'),visualisation_nous(),test(),showThis('close_button-id'),close_button()"
+              >
+                Visualiser
+              </button>
+            </div>
           </div>
         </section>
-     
-      <section id="download-pdb" class="download-pdb">
-      <h1>Télécharger</h1>
-      <h2>
-        Vous pouvez télecharger le PDB
-      </h2>
-      <div class="component">
-        <ul class="align">
-          <li>
-            <figure class="book">
-              <!-- Front -->
 
-              <ul class="hardcover_front">
-                <li>
-                  <div class="coverDesign blue">
-                    <h1>PDB</h1>
-                    <p>BOOK</p>
-                  </div>
-                </li>
-                <li></li>
-              </ul>
+        <section id="download-pdb" class="download-pdb">
+          <h1>Télécharger</h1>
+          <h2>Vous pouvez télecharger le PDB</h2>
+          <div class="component">
+            <ul class="align">
+              <li>
+                <figure class="book">
+                  <!-- Front -->
 
-              <!-- Pages -->
+                  <ul class="hardcover_front">
+                    <li>
+                      <div class="coverDesign blue">
+                        <h1>PDB</h1>
+                        <p>BOOK</p>
+                      </div>
+                    </li>
+                    <li></li>
+                  </ul>
 
-              <ul class="page">
-                <li></li>
-                <li>
-                  <a class="btn" href="#">Download</a>
-                </li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+                  <!-- Pages -->
 
-              <!-- Back -->
+                  <ul class="page">
+                    <li></li>
+                    <li>
+                      <a class="btn" href="#">Download</a>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
 
-              <ul class="hardcover_back">
-                <li></li>
-                <li></li>
-              </ul>
-              <ul class="book_spine">
-                <li></li>
-                <li></li>
-              </ul>
-            </figure>
-          </li>
-        </ul>
-      </div>
+                  <!-- Back -->
+
+                  <ul class="hardcover_back">
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <ul class="book_spine">
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
     </div>
+    <div id="close_button-id"></div>
+
+    <section id="container-2-visualisation" class="container-2-visualisation">
+      <div class="container-load" name="molecule" id="molecule"></div>
+
+      <div name="molecule2" id="molecule2"></div>
+      <div class="container-couleur-close"></div>
+      <div id="container-01" class="mol-container"></div>
+    </section>
   </body>
-  </section>
-</section>
-  <section class="visualisation" id="visualisation">
-    <div class="container-text">
-      <h2>Visualisation</h2>
-    </div>
-   
-  </section>
-  <div class="container-load" name="molecule" id="molecule"></div>
-  <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
 
-  <div id="container-mol">
-    <div id="container-01" class="mol-container"></div>
-  </div>
   <link rel="stylesheet" href="livre.css" />
   <link rel="stylesheet" href="stylesheet.css" />
   <link rel="stylesheet" href="visualisation.css" />
