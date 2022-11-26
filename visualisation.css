@@ -237,11 +237,14 @@ width:20vw;
 
     
 /* Pour les drop and drang  */
+
+
 input::file-selector-button {
+  margin-left:0;
   font-weight: bold;
   width: 6.8vw;
-  background:  #c1121e68;
-  font-size: 0.4vw;
+  background:  #c1121e76;
+  font-size:0.5em;
 }
 
 
@@ -269,8 +272,7 @@ input[type='file']{
 
 }
 .upload-container input {
-  border: 1px solid #92b0b3;
-  background: #f0e8db;
+  background: #fdf0d5;
   outline: 2px dashed #92b0b3;
   outline-offset: -10px;
   padding: 5% 5% 23% 5%;
@@ -283,16 +285,18 @@ input[type='file']{
 
 .upload-container:before {
   position: absolute;
-  bottom: 10%;
-  left: 20%;
-  content: " Ou glisser déposer";
+  bottom: 13%;
+  left: 16%;
+  content: "Ou déposer le fichier ici";
   color: #669bbc;
-  font-weight: 900;
+  font-weight: 1em;
 }
 
 .upload-btn {
   margin-left: 40%;
   padding: 2% 4%;
+  font-size: 0.8vw;
+  text-align: center;
 }
 
 
