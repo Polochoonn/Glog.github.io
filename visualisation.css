@@ -50,6 +50,7 @@ width:20vw;
 
 
 #mol_name{
+  font-size:1vw;
   width:60%;
 }
 .mol-container {
@@ -93,37 +94,44 @@ width:20vw;
 
 
   /* CSS */
+
+  .liste-molecule{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+  }
 .buttonbox ,input::file-selector-button{
-    appearance: button;
-    background-color: #669bbc;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: din-round,sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: .8px;
-    line-height: 20px;
-    margin: 0.5%;
-    outline: none;
-    overflow: visible;
-    padding: 2% 2%;
-    text-align: center;
-    text-transform: uppercase;
-    touch-action: manipulation;
-    transform: translateZ(0);
-    transition: filter .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: 60%;
-    margin-left:20%;
-}
+  appearance: button;
+  background-color: #669bbc;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0.5%;
+  outline: none;
+  overflow: visible;
+  padding: 2% 2%;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 10vw;
+  font-size:1vw;
+  }
   
   .buttonbox:after {
     background-clip: padding-box;
@@ -238,6 +246,11 @@ width:20vw;
     
 /* Pour les drop and drang  */
 
+.border-drag{
+  display: grid;
+  align-items: center;
+  justify-content:center;
+}
 
 input::file-selector-button {
   margin-left:0;
@@ -283,13 +296,13 @@ input[type='file']{
   background: #f0e8db;
 }
 
+
 .upload-container:before {
   position: absolute;
   bottom: 13%;
   left: 16%;
   content: "Ou déposer le fichier ici";
   color: #669bbc;
-  font-weight: 1em;
 }
 
 .upload-btn {
