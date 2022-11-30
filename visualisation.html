@@ -19,9 +19,8 @@
           <div class="searchbox">
             <input type="search" id="mol_name" placeholder="Exemple 1UBQ" />
             <button
-              onclick="hideThis('molecule'),showThis('molecule2'),showThis('container-01'),showThis('close_button-id'),close_button(),display3D('pdb:'+get_name('mol_name')),visualisation_nous()"
+              onclick="showThis('molecule2'),showThis('container-01'),showThis('close_button-id'),close_button(),display3D('pdb:'+get_name('mol_name')),visualisation_nous()"
               id="search_button"
-              onclick="visualisation(get_name('mol_name'))"
             ></button>
           </div>
         </section>
@@ -30,63 +29,6 @@
           <h2>
             Vous pouvez visualiser plusieurs protéines connus de Monkeypox
           </h2>
-          <div class="liste-molecule">
-            <input
-              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('4QWO'),showThis('close_button-id'),close_button()"
-              class="buttonbox"
-              type="button"
-              value="4QWO"
-            />
-            <input
-              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('1CL4'),showThis('close_button-id'),close_button()"
-              class="buttonbox"
-              type="button"
-              value="1CL4"
-            />
-            <input
-              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('5LMY'),showThis('close_button-id'),close_button()"
-              class="buttonbox"
-              type="button"
-              value="5LMY"
-            />
-
-            <input
-              onclick="hideThis('molecule2'),hideThis('container-01'),showThis('molecule'),visualisation('2F76'),showThis('close_button-id'),close_button()"
-              class="buttonbox"
-              type="button"
-              value="2F76"
-            />
-          </div>
-        </section>
-        <section id="import-pdb" class="import-pdb">
-          <h1>Importer</h1>
-          <h2>
-            Vous pouvez importer un fichier PDB pour pouvoir le visualiser
-          </h2>
-          <div class="border-drag">
-            <div class="upload-container">
-              <input
-                type="file"
-                id="upload_pdb"
-                multiple="true"
-                accept=".pdb"
-              />
-            </div>
-            <br />
-            <div class="border-drag">
-              <button
-                class="buttonbox"
-                onclick="uploadFiles(),hideThis('molecule'),showThis('molecule2'),showThis('container-01'),visualisation_nous(),test(),showThis('close_button-id'),close_button()"
-              >
-                Visualiser
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <section id="download-pdb" class="download-pdb">
-          <h1>Télécharger</h1>
-          <h2>Vous pouvez télecharger le PDB</h2>
           <div class="component">
             <ul class="align">
               <li>
@@ -108,8 +50,21 @@
                   <ul class="page">
                     <li></li>
                     <li>
-                      <a class="btn" href="#">Download</a>
+                      <br />
+                      <input
+                        onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:'+'4QWO'),visualisation_nous(),showThis('close_button-id'),close_button()"
+                        class="buttonbox"
+                        type="button"
+                        value="4QWO"
+                      />
+                      <input
+                        onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:'+'1ZNI'),visualisation_nous(),showThis('close_button-id'),close_button()"
+                        class="buttonbox"
+                        type="button"
+                        value="1ZNI"
+                      />
                     </li>
+
                     <li></li>
                     <li></li>
                     <li></li>
@@ -130,13 +85,36 @@
             </ul>
           </div>
         </section>
+        <section id="import-pdb" class="import-pdb">
+          <h1>Importer</h1>
+          <h2>
+            Vous pouvez importer un fichier PDB pour pouvoir le visualiser
+          </h2>
+          <div class="border-drag">
+            <div class="upload-container">
+              <input
+                type="file"
+                id="upload_pdb"
+                multiple="true"
+                accept=".pdb"
+              />
+            </div>
+            <br />
+            <div class="border-drag">
+              <button
+                class="buttonbox"
+                onclick="uploadFiles(),showThis('molecule2'),showThis('container-01'),visualisation_nous(),test(),showThis('close_button-id'),close_button()"
+              >
+                Visualiser
+              </button>
+            </div>
+          </div>
+        </section>
       </section>
     </div>
     <div id="close_button-id"></div>
 
     <section id="container-2-visualisation" class="container-2-visualisation">
-      <div class="container-load" name="molecule" id="molecule"></div>
-
       <div name="molecule2" id="molecule2"></div>
       <div class="container-couleur-close"></div>
       <div id="container-01" class="mol-container"></div>

@@ -129,16 +129,6 @@ function download_png() {
 
 
 
-function visualisation(molecule){
-    let test=
-    document.querySelector("#molecule");
-    test.innerHTML = `
-    <iframe id="inlineFrameExample"
-    title="Visualisation proteine connus"
-    src="https://3Dmol.org/viewer.html?pdb=${molecule}&style=cartoon:color~spectrum">
-</iframe>
-  `
-  }
 
 
 function visualisation_nous(){
