@@ -29,6 +29,9 @@ body {
 
 /* Pour l'image sur index */
 .text-index{
+  width:30%;
+  height:30%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
     position:absolute;
     margin-top:5%;
@@ -36,26 +39,18 @@ body {
 
 }
 .text-index2{
+  width:30%;
+  height:30%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
     position:absolute;
     margin-top:20%;
-    margin-left:60%;
+    margin-left:65%;
 
 }
 
-.text-index{
-    color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
-    position:absolute;
-    margin-top:5%;
-    margin-left:2%;
-
-}
-.text-index2{
-    color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
-    position:absolute;
-    margin-top:20%;
-    margin-left:60%;
-
+.boite-cliquable{
+  display: block;
 }
 
 #joli{
