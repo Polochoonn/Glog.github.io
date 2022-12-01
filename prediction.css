@@ -20,6 +20,10 @@ top: -570px;
 width: 1200px; 
 } 
 
+#info-phyre h2{
+    margin: inherit;
+}
+
 .test{
     display: grid;
     justify-content: center;
@@ -29,12 +33,25 @@ width: 1200px;
 }
 .round{
     background:  #669bbc;
-    border-radius: 16px;
-
+    /* outline: 3px solid #c1121f; */
+    /* border : 3px solid red ; */
+    border-radius: 16px;   
+    box-shadow: 0 0 0 2pt #c1121f; 
     width: 60vw;
 }
 .txt-phyre{
     border-radius: 16px;
+}
+#table-phyre{    
+    font-family: 'Open Sans', 
+    sans-serif; 
+    font-weight: 300; 
+    line-height: 32px; 
+    margin: 0 0 20px; 
+}
+
+#phyre-list{
+    color: #c1121f; font-family: 'Open Sans', sans-serif; font-size: 1.2vw; font-weight: 300; line-height: 32px; margin: 0 0 20px; 
 
 }
 .phyre-but{
