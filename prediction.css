@@ -20,4 +20,75 @@ top: -570px;
 width: 1200px; 
 } 
 
+#info-phyre h2{
+    margin: inherit;
+}
 
+.test{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: din-round,sans-serif;
+
+}
+.round{
+    background:  #669bbc;
+    /* outline: 3px solid #c1121f; */
+    /* border : 3px solid red ; */
+    border-radius: 16px;   
+    box-shadow: 0 0 0 2pt #c1121f; 
+    width: 60vw;
+}
+.txt-phyre{
+    border-radius: 16px;
+}
+#table-phyre{    
+    font-family: 'Open Sans', 
+    sans-serif; 
+    font-weight: 300; 
+    line-height: 32px; 
+    margin: 0 0 20px; 
+}
+
+#phyre-list{
+    color: #c1121f; font-family: 'Open Sans', sans-serif; font-size: 1.2vw; font-weight: 300; line-height: 32px; margin: 0 0 20px; 
+
+}
+.phyre-but{
+    appearance: button;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0.5%;
+  outline: none;
+  overflow: visible;
+  padding: 2% 2%;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 10vw;
+  font-size:1vw;
+}
+
+#phyre-sub{
+    background-color: #c1121f;
+}
+#phyre-res{
+    background-color: #003049;
+
+}
