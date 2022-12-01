@@ -94,7 +94,7 @@ async function display3D(protein) {
 	let element = document.getElementById('container-01');
 	let pdbUri = protein
 
-	glviewer = $3Dmol.createViewer($(element), { backgroundColor: '0xffffff' }); //defaultcolors: $3Dmol.elementColors.rasmol, 
+	glviewer = $3Dmol.createViewer($(element), { backgroundColor: '#669bbc' }); //defaultcolors: $3Dmol.elementColors.rasmol, 
 
 	if (pdbUri.startsWith('pdb:')) {
 		glviewer, v = $3Dmol.download(pdbUri, glviewer, { doAssembly: true, noSecondaryStructure: false }, function () {
@@ -130,7 +130,6 @@ function download_png() {
 
 
 function visualisation(molecule){
-    console.log(molecule);
     let test=
     document.querySelector("#molecule");
     test.innerHTML = `
@@ -147,32 +146,58 @@ function visualisation_nous(){
   let test=
     document.querySelector("#molecule2");
     test.innerHTML = `
-      <h1>Outils</h1>
+      <div id="container-molecule2-close">
       <br>
-      <h2>
+      <br>
+      <h1>Outils</h1>
+      <div class="border-drag">
+      <h2>Styles</h2>
+      <div class="border-drag">
+
       <input class="buttonbox" type="button" value="Stick" onclick="glviewer.setStyle({},{stick:{}}); glviewer.render();">
-      <input class="buttonbox"  type="button" value="Line" onclick="glviewer.setStyle({},{line:{}}); glviewer.render();">
+      <input class="buttonbox" type="button" value="Line" onclick="glviewer.setStyle({},{line:{}}); glviewer.render();">
       <input class="buttonbox" type="button" value="Cross" onclick="glviewer.setStyle({},{cross:{linewidth:2}}); glviewer.render();">
       <input class="buttonbox" type="button" value="Sphere" onclick="glviewer.setStyle({},{sphere:{}}); glviewer.render();">
       <input class="buttonbox" type="button" value="Cartoon" onclick="glviewer.setStyle({},{cartoon:{}}); glviewer.render();">
-      </h2>
-      <br>
-      <h2>
-      <input class="buttonbox" type="button" value="Label alpha C's" onclick="addLabels(glviewer); glviewer.render();">
-      <input class="buttonbox" type="button" value="Color SS" onclick="colorSS(glviewer);">
-      <input class="buttonbox" type="button" value="Color Spectrum" onclick="colorSpectrum(glviewer);">
-      </h2>
-      <br>
-      <h2>
+      </div>
+      <h2>Atomes & Couleurs</h2>
+      <div class="border-drag">
+
+      <input class="buttonbox" type="button" value="Label Cα" onclick="addLabels(glviewer); glviewer.render();">
+      <input class="buttonbox" type="button" value="SS" onclick="colorSS(glviewer);">
+      <input class="buttonbox" type="button" value="Spectrum" onclick="colorSpectrum(glviewer);">
+      </div>
+
+      <h2>Surfaces</h2>
+      <div class="border-drag">
+
       <input class="buttonbox" type="button" value="Surface1" onclick="surf1 = glviewer.addSurface($3Dmol.SurfaceType.VDW, {}, {hetflag:false,chain:'A'},{hetflag:false,chain:'A'});">
       <input class="buttonbox" type="button" value="Surface2" onclick="surf2 = glviewer.addSurface($3Dmol.SurfaceType.MS, {map:{prop:'partialCharge',scheme:new $3Dmol.Gradient.RWB(-.6,.6)}, opacity:0.85}, {chain:'B'},{chain:'B'});">
       <input class="buttonbox" type="button" value="RM Surfaces" onclick="glviewer.removeAllSurfaces();">
-      <h2>
-      <br>
+      </div>
+
+      <h2>Plus</h2>
+      <div class="border-drag">
+
       <input class="buttonbox" type="button" value="Recenter" onclick="glviewer.zoomTo();">
-      <br>
-      <a class="buttonbox id="download_img" download="image.png"><button type="button" onClick="download_png()">Télécharger PNG</button></a>
+      <a id="download_img" download="image.png">
+      <button class="buttonbox" type="button" onClick="download_png()">PNG</button></a>
+      </div>
+
+      </div>
+      </div>
 
   `
 }
 
+
+function close_button(){
+  let test=
+  document.querySelector("#close_button-id");
+  test.innerHTML = `
+  <div class="container-close">
+    <div id ="test-button" onclick="hideThis('test-button'),hideThis('container-01'),hideThis('molecule2'),hideThis('inlineFrameExample')" class="btn-c btn3"></div>
+   </div>
+
+`
+}

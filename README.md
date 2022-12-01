@@ -12,7 +12,7 @@ peut etre bouton close pour fermer les visus en cours
 
 voir si rajouter des fonctions a 3D moljs
 
-
+bouton quand ya rien ca s'affiche quand meme
 
 
 

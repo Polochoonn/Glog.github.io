@@ -22,7 +22,7 @@ window.onload = function(){
   <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
         <a class="navbar-brand" href="/"
-          ><img
+          ><img id="logo"
             src="https://cdn-icons-png.flaticon.com/512/3024/3024310.png"
             height="60"
         /></a>
@@ -66,3 +66,8 @@ window.onload = function(){
 `
 }
 
+function target_popup(form) {
+  console.log("Nickel");
+  window.open('', 'formpopup', 'width=400,height=400,resizeable,scrollbars');
+  form.target = 'formpopup';
+}
