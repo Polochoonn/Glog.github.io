@@ -1,55 +1,68 @@
-/*class Protein {
-    id_pdb;
-    fasta_file;
-    pdb_file;
+// Pour notre page index.html
 
-    constructor(id_pdb) {
-      this.id_pdb = id_pdb;
-    }
 
-    set_fasta(fasta_file){
-        this.fasta_file= fasta_file;
-    }
-    set_pdb(pdb_file){
-        this.pdb_file= pdb_file;
-    }
+// Fonction de extend pour la navbar
+// Fonction de extend pour la navbar
 
-    get_fasta(){
-        return this.fasta_file;
-    }
-    get_pdb(){
-        return this.pdb_file;
-    }
-  }
- */ 
-  async function readFile(ev){
-    console.log(ev.target.files[0]);
-    const file = ev.target.files[0]; //on récupère l'objet files
-    const txt = await file.text();
-    console.log(txt.length);
+window.onload = function(){
+  let header=
+  document.querySelector("#header");
+  header.innerHTML = `
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
+  <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+      <div class="container">
+        <a class="navbar-brand" href="/"
+          ><img id="logo"
+            src="https://cdn-icons-png.flaticon.com/512/3024/3024310.png"
+            height="60"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link mx-2 active"
+                aria-current="page"
+                href="/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link mx-2"
+                href="/prediction.html"
+                >Prediction</a
+              >
+            </li>
+            <li class="nav-item">
+              <a 
+                  class="nav-link mx-2" 
+                  href="/visualisation.html">Visualisation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+`
 }
 
-function uploadFasta(){
-    var input = document.getElementById("charge").value;
-    console.log("estes");
-    console.log(input);
-}
-function display3D() {
-    let element = $('#container-01');
-    let config = { backgroundColor: 'white' };
-    let viewer = $3Dmol.createViewer( element, config );
-  let pdbUri = './4qw0.pdb';
-  jQuery.ajax( pdbUri, { 
-    success: function(data) {
-      let v = viewer;
-      v.addModel( data, "pdb" );                       /* load data */
-      v.setStyle({}, {cartoon: {color: 'spectrum'}});  /* style all atoms */
-      v.zoomTo();                                      /* set camera */
-      v.render();                                      /* render scene */
-      v.zoom(1.2, 1000);                               /* slight zoom */
-    },
-    error: function(hdr, status, err) {
-      console.error( "Failed to load PDB " + pdbUri + ": " + err );
-    },
-})
-}

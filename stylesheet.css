@@ -1,45 +1,94 @@
-.test{
-    color: green;
-    }
-    
-    
-    body
-    {
-    width: 90%;
+/* Mise en forme générale */
+h1 { color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 2.2vw; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+a { color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.3vw; font-weight: bold; letter-spacing: -1px; }
+
+
+h2 { color: #c1121f; font-family: 'Open Sans', sans-serif; font-size: 1.5vw; font-weight: 300; line-height: 32px; margin: 0 0 20px; text-align: center; }
+.border-drag h2{
+color: #c1121f; font-family: 'Open Sans', sans-serif; font-size: 1.5vw; font-weight: 300; line-height: 32px; 
+
+}
+
+p { color: #003049; font-family: 'Helvetica Neue', sans-serif; font-size: 1vw; line-height: 24px; margin: 0 0 0; text-align: justify; text-justify: inter-word; }
+
+body {
+    width: 100%;
     margin: auto; /* Pour centrer notre page */
-    margin-top: 10%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
-    margin-bottom: 10%;    /* aussi pour le bas du navigateur */
-    background-color: #bfd1d0; /* Un fond pour éviter d'avoir un fond blanc  */
-    }
-    
-    
-    #corps
-    {
-    margin-left: 0%;
-    margin-bottom: 0%;
+    margin-top: 0%; /* Pour éviter de coller avec le haut de la fenêtre du navigateur.  */
+    margin-bottom: 0%;    /* aussi pour le bas du navigateur */
+    background-color:  #fdf0d5; /* Un fond pour éviter d'avoir un fond blanc  */
     padding: 0%;
-    }
-    #corps h1 /* Tous les titres h1 du corps */
-    {
-    color: #d5616aab;
-    text-align: center;
-    font-family: Arial, "Times New Roman", Times, serif;
-    }
-    
-    #corps h2 /* Tous les titres h2 du corps */
-    {
-    height: 30px;
-    /* Une petite image (15x15) de fond sur les titres h2 */
-    background-image: url("images1/petite_image.png");
-    background-repeat: no-repeat; /* L'image  se placera  à gauche du titre */
-    padding-left: 20px;
-    color: #0000ff;
- 
-    }
-    
-    .mol-container {
-        width: 90%;
-        height: 400px;
-        position: relative;
    
-      }
+
+    color:  #c1121e;
+    }
+ h3 {
+        text-shadow: 2px 4px 3px rgba(192, 96, 102, 0.505);
+    }
+
+
+/* Pour l'image sur index */
+.text-index{
+    color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
+    position:absolute;
+    margin-top:5%;
+    margin-left:2%;
+
+}
+.text-index2{
+    color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
+    position:absolute;
+    margin-top:20%;
+    margin-left:60%;
+
+}
+
+.text-index{
+    color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
+    position:absolute;
+    margin-top:5%;
+    margin-left:2%;
+
+}
+.text-index2{
+    color: #c1121f; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5vw; font-weight: bold; letter-spacing: -1px; 
+    position:absolute;
+    margin-top:20%;
+    margin-left:60%;
+
+}
+
+#joli{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* navbar  */
+
+
+#neubar {
+    background: #669bbc;
+    box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
+  }
+   
+  .nav-item .active {
+    border-radius: 6px;
+    background: linear-gradient(145deg, #a9def9, #a9def9);
+    box-shadow:  4px 4px 8px #a9def9,
+                 -4px -4px 8px #003049;
+  }
+  #neubar .nav-item {
+    margin : auto 4px;
+  }
+  #neubar a {
+    padding-left:12px;
+    padding-right:12px;
+  }
+  
+
+  a.navbar-brand {
+    color: #c1121f
+  }
+
+
+/* 2eme visu */

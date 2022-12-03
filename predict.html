@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset=UTF-8>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="3Dmol.js"></script>
+    <script type="text/javascript" src="usefull_function.js"></script>
+    <script type="text/javascript" src="pipe.js"></script>
+    
+    
+  </head>
+
+  <body id="principal">
+    <div id="header"></div>
+
+    <div class="global-container">
+      <section id="prediction">
+        <section id="import-fasta">
+          <h1>Importer</h1>
+          <h2>Importer le fichier Fasta d'un protéine</h2>
+          <div class="border-drag">
+            <div class="upload-container">
+              <input
+                type="file"
+                id="upload_fasta"
+                multiple="true"
+                accept=".fasta"
+              />
+            </div>
+            <br />
+            <div class="border-drag">
+              <button
+                class="buttonbox"
+                onclick="Predict()"
+              >Prédire</button>
+              <output id="list"></output>
+              <textarea id="test"></textarea>
+          </div>
+        </section>
+        <section id="input-sequence">
+          <h1>Sequence</h1>
+          <h2>Rentrer un séquence protéique</h2>
+          <div class="input-bar">
+              <input
+                type="search"
+                id="prot-seq"
+                placeholder = "PIAQI"
+              />
+            </div>
+        </section>
+        <div id="outdiv">
+          <iframe src="http://www.sbg.bio.ic.ac.uk/~phyre2/html/page.cgi?id=index"" 
+          scrolling="no"  
+          id="iniframe">
+        </iframe>
+      </div> 
+    </div>
+      </section>
+    </div>
+    
+  </body>
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link rel="stylesheet" href="prediction.css" />
+</html>
