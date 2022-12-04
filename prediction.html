@@ -3,18 +3,160 @@
   <head>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="3Dmol.js"></script>
+    <script type="text/javascript" src="usefull_function.js"></script>
   </head>
 
   <body class="container-principal">
     <div id="header"></div>
-    <div id="container-chargement" class="container-chargement">
-      <div id="outdiv"><iframe src="http://www.sbg.bio.ic.ac.uk/~phyre2/html/page.cgi?id=index" scrolling="no"  id="iniframe"></iframe></div> 
-      <!-- <iframe
-        id="prediction-iframe"
-        title="Prediction proteine"
-        src="http://www.sbg.bio.ic.ac.uk/~phyre2/html/page.cgi?id=index"
-      >
-      </iframe> -->
+
+    <br />
+    <h1>Prédiction avec Phyre2</h1>
+    <div class="form-pred">
+      <div id="info-phyre">
+        <br />
+        <h2>
+          Utiliser l'outil Phyre2 pour prédire des structures tridimensionnelles
+          :
+        </h2>
+        <h2>1. Copiez la séquence en acide aminé</h2>
+        <h2>2. Entrez votre adresse email</h2>
+        <h2>
+          3. Dès que la prédiction sera prête, vous recevrez un mail avec le
+          fichier pdb de la protéine
+        </h2>
+        <h2>4. Visualiser avec l'outil Visualisation</h2>
+      </div>
+
+      <div id="table-ph">
+        <form
+          id="formpopup"
+          enctype="multipart/form-data"
+          action="http://www.sbg.bio.ic.ac.uk/phyre2/webscripts/phyre2_submit.cgi"
+          method="post"
+          onsubmit="target_popup(this)"
+        >
+          <br />
+          <div class="test">
+            <table
+              class="round"
+              width="60%"
+              cellspacing="1"
+              cellpadding="3"
+              border="0"
+            >
+              <tbody>
+                <tr>
+                  <td id="table-phyre" align="right">
+                    <font color="white"> E-mail Address</font>
+                  </td>
+
+                  <td align="left">
+                    <!-- index_form_start.html end -->
+                    <!--                           -->
+                    <input
+                      class="txt-phyre"
+                      type="text"
+                      size="53"
+                      name="usr-email"
+                      aria-label="usr-email"
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td id="table-phyre" align="right">
+                    <font color="white"> Optional Job description</font>
+                  </td>
+                  <td align="left">
+                    <input
+                      class="txt-phyre"
+                      type="text"
+                      size="53"
+                      name="seq-desc"
+                      aria-label="seq-desc"
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td id="table-phyre" align="right">
+                    <font color="white"> Amino Acid Sequence</font>
+                  </td>
+                  <td align="left">
+                    <textarea
+                      class="txt-phyre"
+                      name="sequence"
+                      aria-label="sequence"
+                      rows="10"
+                      cols="56"
+                    ></textarea>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="right">&nbsp;</td>
+                  <td align="left">
+                    <!--                                   -->
+                    <!-- index_bottomhalf_commercial begin -->
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="right">
+                    <font color="white">Modelling Mode </font>
+                  </td>
+
+                  <td align="left">
+                    <label for="normal">Normal</label
+                    ><input
+                      type="radio"
+                      name="modelmode"
+                      id="normal"
+                      value="normal"
+                      checked=""
+                      aria-label="normal"
+                    />
+                    <label for="intensive">Intensive</label
+                    ><input
+                      type="radio"
+                      name="modelmode"
+                      value="intensive"
+                      id="intensive"
+                      aria-label="intensive"
+                    />
+                  </td>
+                </tr>
+
+                <td class="bottomLeftRound" align="center">&nbsp;</td>
+                <td align="left">
+                  <input
+                    class="phyre-but"
+                    id="phyre-sub"
+                    type="submit"
+                    size="4"
+                    value="Phyre Search"
+                    name="btnS"
+                  />
+                  <input
+                    class="phyre-but"
+                    id="phyre-res"
+                    type="reset"
+                    size="4"
+                    value="Reset"
+                  />
+                </td>
+              </tbody>
+            </table>
+          </div>
+        </form>
+
+        <!-- index_bottomhalf_commercial end -->
+        <!--                                 -->
+        <p>
+          <font size="-2"> Phyre2 5175087 submissions since Feb 14 2011</font>
+        </p>
+        <!--                    -->
+      </div>
     </div>
   </body>
 
