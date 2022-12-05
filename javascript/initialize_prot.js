@@ -1,4 +1,3 @@
-// Fonciton 
 class Protein {
     id_pdb;
     fasta_file;

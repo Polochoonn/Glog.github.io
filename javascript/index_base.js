@@ -1,7 +1,5 @@
-// Pour notre page index.html
+// Pour page index.html
 
-
-// Fonction de extend pour la navbar
 // Fonction de extend pour la navbar
 
 window.onload = function(){
@@ -21,7 +19,7 @@ window.onload = function(){
 ></script>
   <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
-        <a class="navbar-brand" href="/"
+        <a class="navbar-brand" href="/html"
           ><img id="logo"
             src="https://cdn-icons-png.flaticon.com/512/3024/3024310.png"
             height="60"
@@ -43,21 +41,21 @@ window.onload = function(){
               <a
                 class="nav-link mx-2 active"
                 aria-current="page"
-                href="/"
+                href="/html"
                 >Home</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link mx-2"
-                href="/prediction.html"
+                href="../html/prediction.html"
                 >Prediction</a
               >
             </li>
             <li class="nav-item">
               <a 
                   class="nav-link mx-2" 
-                  href="/visualisation.html">Visualisation</a>
+                  href="../html/visualisation.html">Visualisation</a>
             </li>
           </ul>
         </div>
