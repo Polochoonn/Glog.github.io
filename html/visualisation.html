@@ -30,12 +30,12 @@
           <div class="searchbox">
             <input type="search" id="mol_name" placeholder="Exemple 1UBQ" />
             <button
-              onclick="showThis('molecule2'),showThis('container-01'),showThis('close_button-id'),close_button(),display3D('pdb:'+get_name('mol_name')),visualisation_nous()"
+              onclick="showThis('molecule2'),showThis('container-01'),showThis('close_button-id'),closeButton(),display3D('pdb:'+getName('mol_name')),visualisationButton()"
               id="search_button"
             ></button>
           </div>
         </section>
-        <section id="molecule-connus">
+        <section id="molecule-connues">
           <h1>Protéines</h1>
           <h2>
             Vous pouvez visualiser plusieurs protéines connues de Monkeypox
@@ -63,13 +63,13 @@
                     <li>
                       <br />
                       <input
-                        onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:'+'4QWO'),visualisation_nous(),showThis('close_button-id'),close_button()"
+                        onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:'+'4QWO'),visualisationButton(),showThis('close_button-id'),closeButton()"
                         class="buttonbox"
                         type="button"
                         value="4QWO"
                       />
                       <input
-                        onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:'+'1ZNI'),visualisation_nous(),showThis('close_button-id'),close_button()"
+                        onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:'+'1ZNI'),visualisationButton(),showThis('close_button-id'),closeButton()"
                         class="buttonbox"
                         type="button"
                         value="1ZNI"
@@ -114,7 +114,7 @@
             <div class="border-drag">
               <button
                 class="buttonbox"
-                onclick="uploadFiles(),showThis('molecule2'),showThis('container-01'),visualisation_nous(),test(),showThis('close_button-id'),close_button()"
+                onclick="uploadFiles(),showThis('molecule2'),showThis('container-01'),visualisationButton(),uploadNewProtein(),showThis('close_button-id'),closeButton()"
               >
                 Visualiser
               </button>
@@ -128,6 +128,7 @@
     <section id="container-2-visualisation" class="container-2-visualisation">
       <div name="molecule2" id="molecule2"></div>
       <div class="container-couleur-close"></div>
+      
       <div id="container-01" class="mol-container"></div>
     </section>
   </body>
