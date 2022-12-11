@@ -40,15 +40,13 @@
 
 }
 
-#download_img{
-  padding: 0;
-}
+
 
 #container-molecule2-close h1{
-  margin: 0%;
+  margin: inherit;
 }
 #container-molecule2-close h2 {
-  margin-bottom: 0%;
+  margin-bottom: inherit;
 }
 
 
@@ -77,7 +75,6 @@ width:20vw;
     /* background-color: orange; */
     
     width: 100%;
-    height:80vh;
     display: flex;
     justify-content: space-evenly; 
     padding: 1% 0% 0 0;
@@ -94,7 +91,7 @@ width:20vw;
   }
   
 .container-couleur-close{
-  height: 80vh;
+  height: 100vh;
 }
 
 #recherche,#import-pdb,#molecule-connues{
