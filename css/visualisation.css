@@ -32,7 +32,7 @@
   
 .container-2-visualisation{
   background-color: #669bbc;
-  height: 80vh;
+  height: 90vh;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #c1121f 0px 0px 0px 3px;
   display:flex;
   align-items: top;
@@ -67,7 +67,7 @@ width:20vw;
           position: relative;
           width: 90vw;
           padding: 0%;
-          height: 80vh;
+          height: 90vh;
           margin: 0%;
         }
         

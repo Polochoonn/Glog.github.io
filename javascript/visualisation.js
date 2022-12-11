@@ -230,8 +230,7 @@ function visualisationButton() {
       onclick="glviewer.zoomTo();"
     />
     <a id="download_img" download="image.png">
-      <button class="buttonbox" type="button" onClick="downloadPng()">
-        Download PNG
+      <button class="buttonbox" type="button" onClick="downloadPng()">Download PNG
       </button></a
     >
   </div>
