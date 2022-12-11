@@ -1,6 +1,8 @@
-// Pour page index.html
+/**
+ * Ce fichier contient une fonction qui permet d'afficher la navbar
+ *
+ */
 
-// Fonction de extend pour la navbar
 
 window.onload = function(){
   let header=

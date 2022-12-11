@@ -111,7 +111,6 @@ function visualisationButton() {
   currentView.innerHTML = `
       <div id="container-molecule2-close">
       <br>
-      <br>
       <h1>Outils</h1>
       <div class="border-drag">
       <h2>Styles</h2>
@@ -128,8 +127,8 @@ function visualisationButton() {
 
       <input class="buttonbox" type="button" value="Label Cα" onclick="addLabels('CA'); glviewer.render();">
       <input class="buttonbox" type="button" value="Label C-beta" onclick="addLabels('CB'); glviewer.render();">
-      <input class="buttonbox" type="button" value="Remove CA Label" onclick="removeLabels('CA'); glviewer.render();">
-      <input class="buttonbox" type="button" value="Remove CB Label" onclick="removeLabels('CB'); glviewer.render();">
+      <input class="buttonbox" type="button" value="Remove CA" onclick="removeLabels('CA'); glviewer.render();">
+      <input class="buttonbox" type="button" value="Remove CB" onclick="removeLabels('CB'); glviewer.render();">
 
       <input class="buttonbox" type="button" value="SS" onclick="colorSS(glviewer);">
       <input class="buttonbox" type="button" value="Spectrum" onclick="colorSpectrum(glviewer);">
@@ -142,18 +141,18 @@ function visualisationButton() {
       <input class="buttonbox" type="button" value="Surface2" onclick="surf2 = glviewer.addSurface($3Dmol.SurfaceType.MS, {map:{prop:'partialCharge',scheme:new $3Dmol.Gradient.RWB(-.6,.6)}, opacity:0.85}, {chain:'B'},{chain:'B'});">
       <input class="buttonbox" type="button" value="Surface3" onclick="surf3 = glviewer.addSurface($3Dmol.SurfaceType.SAS, {map:{prop:'partialCharge',scheme:new $3Dmol.Gradient.RWB(-.6,.6)}, opacity:0.85}, {chain:'C'},{chain:'C'});">
       <input class="buttonbox" type="button" value="Surface4" onclick="surf4 = glviewer.addSurface($3Dmol.SurfaceType.SES, {map:{prop:'partialCharge',scheme:new $3Dmol.Gradient.RWB(-.6,.6)}, opacity:0.85}, {chain:'D'},{chain:'D'});">
-      <input class="buttonbox" type="button" value="Remove all Surfaces" onclick="glviewer.removeAllSurfaces();">
+      <input class="buttonbox" type="button" value="Remove all" onclick="glviewer.removeAllSurfaces();">
       </div>
-
+      </div>
       <h2>Plus</h2>
-      <div class="border-drag">
+      <div" class="border-drag">
 
-      <input class="buttonbox" type="button" value="Recenter" onclick="glviewer.zoomTo();">
+      <input  class="buttonbox" type="button" value="Recenter" onclick="glviewer.zoomTo();">
       <a id="download_img" download="image.png">
-      <button class="buttonbox" type="button" onClick="downloadPng()">Download in PNG</button></a>
+      <button  class="buttonbox" type="button" onClick="downloadPng()">Download PNG</button></a>
       </div>
 
-      </div>
+      
       </div>
 
   `

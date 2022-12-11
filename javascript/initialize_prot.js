@@ -1,21 +1,20 @@
+/**
+ * Ce fichier contient les fonctions permettant d'initialiser un objet de type Protein
+ *
+ */
+  
+
+
 class Protein {
     idPdb;
-    fastaFile;
     pdbFile;
 
     constructor(idPdb) {
       this.idPdb = idPdb;
     }
 
-    setFasta(fastaFile){
-        this.fastaFile= fastaFile;
-    }
     setPdb(pdbFile){
         this.pdbFile= pdbFile;
-    }
-
-    getFasta(){
-        return this.fastaFile;
     }
     getPdb(){
         return this.pdbFile;
