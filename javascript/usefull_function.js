@@ -1,6 +1,3 @@
-
-//Pour faire apparaitre/disparaitre html 
-
 function hideThis(id){
   var obj = document.getElementById(id);
   obj.style.display = "none";
@@ -14,8 +11,8 @@ function showThis(id)
   }
 
 
-// Fonction pour recuperer un nom exemple pdb
-  function get_name(id){
+// utilisée ??
+  function getName(id){
     var name = document.getElementById(id).value;
     return name;
   }
@@ -28,7 +25,7 @@ function RedirectionHome(){
   }
   
 
-  // Pour le drag and drop fichier en cours...
+
   function uploadFiles() {
     var files = document.getElementById('upload_pdb').files;
     if(files.length==0){
@@ -42,10 +39,7 @@ function RedirectionHome(){
     }
 }
 
-
-// pop up
-function target_popup(form) {
-  console.log("Nickel");
+function targetPopup(form) {
   window.open('', 'formpopup', 'width=400,height=400,resizeable,scrollbars');
   form.target = 'formpopup';
 }
