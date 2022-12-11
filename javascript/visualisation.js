@@ -222,7 +222,7 @@ function visualisationButton() {
     </div>
 
     <h2>Plus</h2>
-
+    <div class="border-drag">
     <input
       class="buttonbox"
       type="button"
@@ -233,6 +233,7 @@ function visualisationButton() {
       <button class="buttonbox" type="button" onClick="downloadPng()">Download PNG
       </button></a
     >
+  </div>
   </div>
 </div>
 
