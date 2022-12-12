@@ -92,3 +92,47 @@ width: 1200px;
     background-color: #003049;
 
 }
+
+.outil-alphafold{
+    position: absolute;
+    top: 10%;
+    left:50%;
+    transform : translate(-50%, 0%);
+    width: 50%;
+    text-align: center;
+  }
+  button{
+    
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+    appearance: button;
+    background-color: #669bbc;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 4 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 12vw;
+  
+  }
