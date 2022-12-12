@@ -1,142 +1,129 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Monkeypox protein visualisation page</title>
-    <script type="text/javascript" src="../javascript/index_base.js"></script>
-    <script
-      type="text/javascript"
-      src="../javascript/visualisation.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../javascript/initialize_prot.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../javascript/usefull_function.js"
-    ></script>
-    <script type="text/javascript" src="../javascript/3Dmol.js"></script>
-  </head>
 
-  <body id="principal">
-    <div id="header"></div>
+<head>
+  <meta charset="utf-8" />
+  <title>Monkeypox protein visualisation page</title>
+  <script type="text/javascript" src="../javascript/index_base.js"></script>
+  <script type="text/javascript" src="../javascript/visualisation.js"></script>
+  <script type="text/javascript" src="../javascript/initialize_prot.js"></script>
+  <script type="text/javascript" src="../javascript/usefull_function.js"></script>
+  <script type="text/javascript" src="../javascript/3Dmol.js"></script>
+</head>
 
-    <div class="container-vcarre-v">
-      <section id="container-visualisation">
-        <!-- Recherche d'une protéine par son identifiant PDB -->
-        <section id="recherche">
-          <h1>Rechercher</h1>
-          <h2>Vous pouvez rechercher une molécule par son identifiant PDB</h2>
-          <div class="searchbox">
-            <input type="search" id="mol_name" placeholder="Exemple 1UBQ" />
-            <button
-              onclick="showThis('molecule2'),showThis('container-01'),showThis('close_button-id'),closeButton(),display3D('pdb:'+getName('mol_name')),visualisationButton()"
-              id="search_button"
-            ></button>
-          </div>
-        </section>
-        <!-- Liste des protéines déjà identifiée comme étant rattachées à MP -->
-        <section id="molecule-connues">
-          <h1>Protéines</h1>
-          <h2>
-            Vous pouvez visualiser plusieurs protéines connues de Monkeypox
-          </h2>
-          <div class="component">
-            <ul class="align">
-              <li>
-                <figure class="book">
-                  <!-- Front -->
+<body id="principal">
+  <div id="header"></div>
 
-                  <ul class="hardcover_front">
-                    <li>
-                      <div class="coverDesign blue">
-                        <h1>PDB</h1>
-                        <p>BOOK</p>
-                      </div>
-                    </li>
-                    <li></li>
-                  </ul>
-
-                  <!-- Pages -->
-
-                  <ul class="page">
-                    <li></li>
-                    <li>
-                      <br />
-                      <input
-                        onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:'+'4QWO'),visualisationButton(),showThis('close_button-id'),closeButton()"
-                        class="buttonbox"
-                        type="button"
-                        value="4QWO"
-                      />
-                      <input
-                        onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:'+'1ZNI'),visualisationButton(),showThis('close_button-id'),closeButton()"
-                        class="buttonbox"
-                        type="button"
-                        value="1ZNI"
-                      />
-                    </li>
-
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
-
-                  <!-- Back -->
-
-                  <ul class="hardcover_back">
-                    <li></li>
-                    <li></li>
-                  </ul>
-                  <ul class="book_spine">
-                    <li></li>
-                    <li></li>
-                  </ul>
-                </figure>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section id="import-pdb" class="import-pdb">
-          <!-- Importer un fichier PDB -->
-          <h1>Importer</h1>
-          <h2>
-            Vous pouvez importer un fichier PDB pour pouvoir le visualiser
-          </h2>
-          <div class="border-drag">
-            <div class="upload-container">
-              <input
-                type="file"
-                id="upload_pdb"
-                multiple="true"
-                accept=".pdb"
-              />
-            </div>
-            <br />
-            <div class="border-drag">
-              <button
-                class="buttonbox"
-                onclick="uploadFiles(),showThis('molecule2'),showThis('container-01'),visualisationButton(),uploadNewProtein(),showThis('close_button-id'),closeButton()"
-              >
-                Visualiser
-              </button>
-            </div>
-          </div>
-        </section>
+  <div class="container-vcarre-v">
+    <section id="container-visualisation">
+      <!-- Recherche d'une protéine par son identifiant PDB -->
+      <section id="recherche">
+        <h1>Rechercher</h1>
+        <h2>Vous pouvez rechercher une molécule par son identifiant PDB</h2>
+        <div class="searchbox">
+          <input type="search" id="mol_name" placeholder="Exemple 1UBQ" />
+          <button
+            onclick="showThis('molecule2'),showThis('container-01'),showThis('close_button-id'),closeButton(),display3D('pdb:'+getName('mol_name')),visualisationButton()"
+            id="search_button"></button>
+        </div>
       </section>
-    </div>
-    <div id="close_button-id"></div>
+      <!-- Liste des protéines déjà identifiée comme étant rattachées à MP -->
+      <section id="molecule-connues">
+        <h1>Protéines</h1>
+        <h2>
+          Vous pouvez visualiser plusieurs protéines connues de Monkeypox
+        </h2>
+        <div class="component">
+          <ul class="align">
+            <li>
+              <figure class="book">
+                <!-- Front -->
 
-    <section id="container-2-visualisation" class="container-2-visualisation">
-      <div name="molecule2" id="molecule2"></div>
-      <div class="container-couleur-close"></div>
-      
-      <div id="container-01" class="mol-container"></div>
+                <ul class="hardcover_front">
+                  <li>
+                    <div class="coverDesign blue">
+                      <h1>PDB</h1>
+                      <p>BOOK</p>
+                    </div>
+                  </li>
+                  <li></li>
+                </ul>
+
+                <!-- Pages -->
+
+                <ul class="page">
+                  <li></li>
+                  <li>
+                    <br />
+                    <input
+                      onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:4QWO'),visualisationButton(),showThis('close_button-id'),closeButton()"
+                      class="buttonbox" type="button" value="4QWO" />
+                    <input
+                      onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:6TQP'),visualisationButton(),showThis('close_button-id'),closeButton()"
+                      class="buttonbox" type="button" value="6TQP" />
+                    <input
+                      onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:6TQQ'),visualisationButton(),showThis('close_button-id'),closeButton()"
+                      class="buttonbox" type="button" value="6TQQ" />
+                    <input
+                      onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:6TRR'),visualisationButton(),showThis('close_button-id'),closeButton()"
+                      class="buttonbox" type="button" value="6TRR" />
+                    <input
+                      onclick="showThis('molecule2'),showThis('container-01'),display3D('pdb:4FFE'),visualisationButton(),showThis('close_button-id'),closeButton()"
+                      class="buttonbox" type="button" value="4FFE" />
+                  </li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+
+                <!-- Back -->
+
+                <ul class="hardcover_back">
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="book_spine">
+                  <li></li>
+                  <li></li>
+                </ul>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="import-pdb" class="import-pdb">
+        <!-- Importer un fichier PDB -->
+        <h1>Importer</h1>
+        <h2>
+          Vous pouvez importer un fichier PDB pour pouvoir le visualiser
+        </h2>
+        <div class="border-drag">
+          <div class="upload-container">
+            <input type="file" id="upload_pdb" multiple="true" accept=".pdb" />
+          </div>
+          <br />
+          <div class="border-drag">
+            <button class="buttonbox"
+              onclick="uploadFiles(),showThis('molecule2'),showThis('container-01'),visualisationButton(),uploadNewProtein(),showThis('close_button-id'),closeButton()">
+              Visualiser
+            </button>
+          </div>
+        </div>
+      </section>
     </section>
-  </body>
+  </div>
+  <div id="close_button-id"></div>
 
-  <link rel="stylesheet" href="../css/livre.css" />
-  <link rel="stylesheet" href="../css/stylesheet.css" />
-  <link rel="stylesheet" href="../css/visualisation.css" />
+  <section id="container-2-visualisation" class="container-2-visualisation">
+    <div name="molecule2" id="molecule2"></div>
+    <div class="container-couleur-close"></div>
+
+    <div id="container-01" class="mol-container"></div>
+  </section>
+</body>
+
+<link rel="stylesheet" href="../css/livre.css" />
+<link rel="stylesheet" href="../css/stylesheet.css" />
+<link rel="stylesheet" href="../css/visualisation.css" />
+
 </html>
