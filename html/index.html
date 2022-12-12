@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Monkeypox protein home page</title>
-    <script type="text/javascript" src="../javascript/index_base.js"></script>
-  </head>
 
-  <div id="header"></div>
+<head>
+  <meta charset="utf-8" />
+  <title>Monkeypox protein home page</title>
+  <script type="text/javascript" src="../javascript/index_base.js"></script>
+</head>
 
-  <!-- Contenu principal -->
+<div id="header"></div>
 
-  <body class="index">
-    <div class="text-index">
-      <button
-        onclick="window.location.href = '../html/prediction.html'"
-        class="button-accueil-transparent"
-      >
-        Vous pouvez prédire des conformations 3D en cliquant ici ! <br /><br />
-        <h1 class="bleu">Phyre2</h1>
-      </button>
-    </div>
-    <div class="text-index2">
-      <button
-        onclick="window.location.href = '../html/visualisation.html'"
-        class="button-accueil-transparent"
-      >
-        Ou bien ici, vous pouvez visualiser des protéines en 3D ! <br /><br />
-        <h1 class="bleu">3Dmol</h1>
-      </button>
-    </div>
-    <iframe
-      src="https://my.spline.design/weirdbubblecopy-d16cce2ed6a58b1989446a4a810e344e/"
-      id="joli"
-    ></iframe>
-    <div class="redirection-other-site">
-      <button class="buttonbox" type="button" onclick="window.location.href = '../html/prediction.html'">Métabolisme</button>
-      <button class="buttonbox" type="button"  onclick="window.location.href = '../html/prediction.html'">Génétique</button>
-      <button class="buttonbox" type="button"  onclick="window.location.href = '../html/prediction.html'">Epidemiologie</button>
-    </div>
-  </body>
+<!-- Contenu principal -->
 
-  <link rel="stylesheet" href="../css/stylesheet.css" />
+<body class="index">
+
+  <div class="other-site" id="other-site">
+    <button class="button-foot" id="btn1"
+      onclick="window.location.href = '../html/prediction.html'">Métabolisme</button>
+    <button class="button-foot" onclick="window.location.href = '../html/prediction.html'">Génétique</button>
+    <button class="button-foot" onclick="window.location.href = '../html/prediction.html'">Epidemiologie</button>
+  </div>
+
+  <div class="text-index">
+    <button onclick="window.location.href = '../html/prediction.html'" class="button-accueil-transparent">
+      Vous pouvez prédire des conformations 3D en cliquant ici ! <br /><br />
+      <h1 class="bleu">Phyre2</h1>
+    </button>
+  </div>
+  <div class="text-index2">
+    <button onclick="window.location.href = '../html/visualisation.html'" class="button-accueil-transparent">
+      Ou bien ici, vous pouvez visualiser des protéines en 3D ! <br /><br />
+      <h1 class="bleu">3Dmol</h1>
+    </button>
+  </div>
+
+  <iframe src="https://my.spline.design/weirdbubblecopy-d16cce2ed6a58b1989446a4a810e344e/" id="joli"></iframe>
+
+
+
+</body>
+
+<link rel="stylesheet" href="../css/stylesheet.css" />
+
 </html>
