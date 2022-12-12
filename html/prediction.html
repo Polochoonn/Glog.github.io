@@ -1,168 +1,120 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Monkeypox protein prediction page</title>
 
-    <script type="text/javascript" src="../javascript/index_base.js"></script>
-    <script type="text/javascript" src="../javascript/3Dmol.js"></script>
-    <script type="text/javascript" src="../javascript/usefull_function.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Monkeypox protein prediction page</title>
 
-  <body class="container-principal">
-    <div id="header"></div>
+  <script type="text/javascript" src="../javascript/index_base.js"></script>
+  <script type="text/javascript" src="../javascript/usefull_function.js"></script>
+</head>
 
-    <br />
-    <h1>Prédiction avec Phyre2</h1>
-    <div class="form-pred">
-      <div id="info-phyre">
-        <br />
-        <h2>
-          Utiliser l'outil Phyre2 pour prédire des structures tridimensionnelles:
-        </h2>
-        <h2>1. Copiez la séquence en acide aminé</h2>
-        <h2>2. Entrez votre adresse email</h2>
-        <h2>
-          3. Dès que la prédiction sera prête, vous recevrez un mail avec le
-          fichier pdb de la protéine
-        </h2>
-        <h2>4. Visualiser avec l'outil Visualisation</h2>
-      </div>
+<body class="container-principal">
+  <div id="header"></div>
 
-      <!-- Inclusion du code de Phyre2 -->
-      <div id="table-ph">
-        <form
-          id="formpopup"
-          enctype="multipart/form-data"
-          action="http://www.sbg.bio.ic.ac.uk/phyre2/webscripts/phyre2_submit.cgi"
-          method="post"
-          onsubmit="targetPopup(this)"
-        >
-          <br />
-          <div class="test">
-            <table
-              class="round"
-              width="60%"
-              cellspacing="1"
-              cellpadding="3"
-              border="0"
-            >
-              <tbody>
-                <tr>
-                  <td id="table-phyre" align="right">
-                    <font color="white">Adresse E-mail</font>
-                  </td>
-
-                  <td align="left">
-                    <!-- index_form_start.html end -->
-                    <!--                           -->
-                    <input
-                      class="txt-phyre"
-                      type="text"
-                      size="53"
-                      name="usr-email"
-                      aria-label="usr-email"
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td id="table-phyre" align="right">
-                    <font color="white"> Description optionnelle</font>
-                  </td>
-                  <td align="left">
-                    <input
-                      class="txt-phyre"
-                      type="text"
-                      size="53"
-                      name="seq-desc"
-                      aria-label="seq-desc"
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td id="table-phyre" align="right">
-                    <font color="white"> Sequence au format FASTA</font>
-                  </td>
-                  <td align="left">
-                    <textarea
-                      class="txt-phyre"
-                      name="sequence"
-                      aria-label="sequence"
-                      rows="10"
-                      cols="56"
-                    ></textarea>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td align="right">&nbsp;</td>
-                  <td align="left">
-                    <!--                                   -->
-                    <!-- index_bottomhalf_commercial begin -->
-                  </td>
-                </tr>
-
-                <tr>
-                  <td align="right">
-                    <font color="white">Mode de modélisation</font>
-                  </td>
-
-                  <td align="left">
-                    <label for="normal">Normal</label
-                    ><input
-                      type="radio"
-                      name="modelmode"
-                      id="normal"
-                      value="normal"
-                      checked=""
-                      aria-label="normal"
-                    />
-                    <label for="intensive">Intensive</label
-                    ><input
-                      type="radio"
-                      name="modelmode"
-                      value="intensive"
-                      id="intensive"
-                      aria-label="intensive"
-                    />
-                  </td>
-                </tr>
-
-                <td class="bottomLeftRound" align="center">&nbsp;</td>
-                <td align="left">
-                  <input
-                    class="phyre-but"
-                    id="phyre-sub"
-                    type="submit"
-                    size="4"
-                    value="Phyre Search"
-                    name="btnS"
-                  />
-                  <input
-                    class="phyre-but"
-                    id="phyre-res"
-                    type="reset"
-                    size="4"
-                    value="Reset"
-                  />
-                </td>
-              </tbody>
-            </table>
-          </div>
-        </form>
-
-        <!-- index_bottomhalf_commercial end -->
-        <!--                                 -->
-        <p>
-          <font size="-2"> Phyre2 5175087 submissions since Feb 14 2011</font>
-        </p>
-        <!--                    -->
-      </div>
+  <br />
+  <h1>Prédiction avec Phyre2</h1>
+  <div class="form-pred">
+    <div id="info-phyre">
+      <br />
+      <h2>
+        Utiliser l'outil Phyre2 pour prédire des structures tridimensionnelles:
+      </h2>
+      <h2>1. Copiez la séquence en acide aminé</h2>
+      <h2>2. Entrez votre adresse email</h2>
+      <h2>
+        3. Dès que la prédiction sera prête, vous recevrez un mail avec le
+        fichier pdb de la protéine
+      </h2>
+      <h2>4. Visualiser avec l'outil Visualisation</h2>
     </div>
-  </body>
 
-  <link rel="stylesheet" href="../css/stylesheet.css" />
-  <link rel="stylesheet" href="../css/prediction.css" />
+    <!-- Inclusion du code de Phyre2 -->
+    <div id="table-ph">
+      <form id="formpopup" enctype="multipart/form-data"
+        action="http://www.sbg.bio.ic.ac.uk/phyre2/webscripts/phyre2_submit.cgi" method="post"
+        onsubmit="targetPopup(this)">
+        <br />
+        <div class="test">
+          <table class="round" width="60%" cellspacing="1" cellpadding="3" border="0">
+            <tbody>
+              <tr>
+                <td id="table-phyre" align="right">
+                  <font color="white">Adresse E-mail</font>
+                </td>
+
+                <td align="left">
+                  <!-- index_form_start.html end -->
+                  <!--                           -->
+                  <input class="txt-phyre" type="text" size="53" name="usr-email" aria-label="usr-email" />
+                </td>
+              </tr>
+
+              <tr>
+                <td id="table-phyre" align="right">
+                  <font color="white"> Description optionnelle</font>
+                </td>
+                <td align="left">
+                  <input class="txt-phyre" type="text" size="53" name="seq-desc" aria-label="seq-desc" />
+                </td>
+              </tr>
+
+              <tr>
+                <td id="table-phyre" align="right">
+                  <font color="white"> Sequence au format FASTA</font>
+                </td>
+                <td align="left">
+                  <textarea class="txt-phyre" name="sequence" aria-label="sequence" rows="10" cols="56"></textarea>
+                </td>
+              </tr>
+
+              <tr>
+                <td align="right">&nbsp;</td>
+                <td align="left">
+                  <!--                                   -->
+                  <!-- index_bottomhalf_commercial begin -->
+                </td>
+              </tr>
+
+              <tr>
+                <td align="right">
+                  <font color="white">Mode de modélisation</font>
+                </td>
+
+                <td align="left">
+                  <label for="normal">Normal</label><input type="radio" name="modelmode" id="normal" value="normal"
+                    checked="" aria-label="normal" />
+                  <label for="intensive">Intensive</label><input type="radio" name="modelmode" value="intensive"
+                    id="intensive" aria-label="intensive" />
+                </td>
+              </tr>
+
+              <td class="bottomLeftRound" align="center">&nbsp;</td>
+              <td align="left">
+                <input class="phyre-but" id="phyre-sub" type="submit" size="4" value="Phyre Search" name="btnS" />
+                <input class="phyre-but" id="phyre-res" type="reset" size="4" value="Reset" />
+              </td>
+            </tbody>
+          </table>
+        </div>
+      </form>
+
+      <!-- index_bottomhalf_commercial end -->
+      <!--                                 -->
+      <p>
+        <font size="-2"> Phyre2 5175087 submissions since Feb 14 2011</font>
+      </p>
+      <!--                    -->
+    </div>
+  </div>
+  <div class="outil-alphafold" id="outil-alphafold">
+    <h1>Prédiction avec AlphaFold2</h1>
+    <button class="button-foot" id="btn-alphafold" onclick="window.location.href = '../html/prediction.html'">Run
+      AlphaFold2</button>
+  </div>
+</body>
+
+<link rel="stylesheet" href="../css/stylesheet.css" />
+<link rel="stylesheet" href="../css/prediction.css" />
+
 </html>
