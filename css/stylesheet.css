@@ -73,14 +73,56 @@ body {
   background-color: #fdf0d5;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border:1px solid #669bbc;
+  font-size: 0.4em;
  
 }
 
 .button-accueil-transparent:hover {
   background-color: #fbefd7;
 }
-/* navbar  */
+/* boutons bas de page */
+.other-site{
+  position: absolute;
+  top: 10%;
+  left:50%;
+  transform : translate(-50%, 0%);
+  width: 50%;
+  text-align: center;
+}
+button{
+  appearance: button;
+  background-color: #669bbc;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 4 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0.5%;
+  outline: none;
+  overflow: visible;
+  padding: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 12vw;
 
+}
+
+
+/* navbar  */
 
 #neubar {
     background: #669bbc;
